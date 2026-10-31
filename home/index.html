@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>أ/ نور الدين | سلسلة الألفية في نحو الثانوية</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--primary:#9a3412;--primary-light:#ea580c;--secondary:#7c2d12;--gold:#fbbf24;--dark:#1c1917;--muted:#78716c;--card:#fff;--bg:#fff7ed;--ok:#10b981}
+*{box-sizing:border-box;margin:0;padding:0;font-family:'Cairo',Tahoma,sans-serif;-webkit-tap-highlight-color:transparent}
+body{background:var(--bg);background-image:radial-gradient(#fdba74 1.5px,transparent 1.5px);background-size:25px 25px;color:var(--dark);min-height:100vh;display:flex;flex-direction:column}
+header{background:linear-gradient(135deg,#1c0a03,#7c2d12,#c2410c);color:#fff;text-align:center;padding:28px 16px 90px;position:relative}
+.hc{position:relative;z-index:2;display:flex;align-items:center;justify-content:center;gap:clamp(18px,5vw,45px);flex-wrap:wrap}
+.photo{width:clamp(150px,42vw,230px);height:clamp(150px,42vw,230px);border-radius:50%;object-fit:cover;object-position:center top;border:5px solid var(--gold);box-shadow:0 0 0 8px rgba(251,191,36,.25),0 10px 25px rgba(0,0,0,.5);background:#fff}
+.ht{display:flex;flex-direction:column;align-items:center}
+.series{font-size:clamp(1rem,4vw,1.35rem);font-weight:800;color:#fed7aa;background:rgba(0,0,0,.3);border:1px solid rgba(251,191,36,.45);padding:5px 18px;border-radius:30px;margin-bottom:8px}
+h1{font-size:clamp(2.4rem,11vw,4.2rem);font-weight:900;background:linear-gradient(to right,#fde047,#f59e0b);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(2px 4px 6px rgba(0,0,0,.5));line-height:1.2}
+.role{font-size:clamp(1rem,3.5vw,1.25rem);font-weight:700;color:#ffedd5;margin:2px 0 10px}
+.pill{font-weight:700;background:rgba(0,0,0,.35);padding:6px 20px;border-radius:30px;border:1px solid rgba(255,255,255,.2);font-size:clamp(.9rem,3vw,1.05rem)}
+.wave{position:absolute;bottom:-1px;left:0;width:100%;height:auto;z-index:1}
+main{flex:1;width:100%;max-width:1000px;margin:0 auto;padding:10px 16px 50px}
+.grade{margin-bottom:30px}
+.grade h2{display:flex;align-items:center;gap:10px;font-size:clamp(1.25rem,4.5vw,1.6rem);font-weight:900;color:var(--secondary);margin-bottom:14px}
+.grade h2::before{content:"";width:8px;height:30px;border-radius:4px;background:linear-gradient(var(--primary-light),var(--primary))}
+.grade h2 small{font-size:.8rem;font-weight:700;color:var(--muted);background:#ffedd5;border:1px solid #fed7aa;padding:1px 10px;border-radius:20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:16px}
+.card{background:var(--card);border-radius:18px;padding:18px;box-shadow:0 8px 18px -6px rgba(0,0,0,.12);border-top:5px solid var(--primary-light);display:flex;flex-direction:column;gap:12px}
+.card .top{display:flex;align-items:center;gap:12px}
+.num{flex-shrink:0;width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,#ffedd5,#fed7aa);color:var(--primary);font-weight:900;font-size:1.2rem;display:flex;align-items:center;justify-content:center}
+.card h3{font-size:1.25rem;font-weight:800;line-height:1.5}
+.card p{font-size:.9rem;color:var(--muted);font-weight:600}
+.actions{display:flex;gap:10px}
+.btn{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 10px;border-radius:12px;font-size:1rem;font-weight:800;text-decoration:none;cursor:pointer;border:none;border-bottom:3px solid rgba(0,0,0,.25);transition:transform .15s}
+.btn:active{transform:translateY(2px)}
+.open{background:linear-gradient(to bottom,var(--primary-light),var(--primary));color:#fff}
+.copy{background:#f5f5f4;color:var(--dark);border-bottom-color:#d6d3d1}
+.copy.done{background:var(--ok);color:#fff;border-bottom-color:#047857}
+.btn svg{width:18px;height:18px;flex-shrink:0}
+footer{background:var(--dark);color:#d6d3d1;text-align:center;padding:22px 16px;border-top:4px solid var(--primary-light)}
+footer p{margin:4px 0;font-weight:700}
+footer a{color:#fbbf24;text-decoration:none;font-weight:800;direction:ltr;display:inline-block}
+.toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,120px);background:var(--dark);color:#fff;padding:12px 22px;border-radius:30px;font-weight:800;box-shadow:0 10px 25px rgba(0,0,0,.3);transition:transform .3s,opacity .3s;opacity:0;visibility:hidden;z-index:50;max-width:calc(100% - 32px);text-align:center}
+.toast.show{transform:translate(-50%,0);opacity:1;visibility:visible}
+</style>
+</head>
+<body>
+<header>
+  <div class="hc">
+    <img class="photo" src="../photo.jpg" alt="أ/ نور الدين">
+    <div class="ht">
+      <div class="series">سلسلة الألفية في نحو الثانوية</div>
+      <h1>أ/ نور الدين</h1>
+      <div class="role">معلم اللغة العربية</div>
+      <span class="pill">🎮 دروس تفاعلية بالألعاب</span>
+    </div>
+  </div>
+  <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff7ed" d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,170.7C960,160,1056,192,1152,208C1248,224,1344,224,1392,224L1440,224L1440,320L0,320Z"></path></svg>
+</header>
+
+<main id="main"></main>
+
+<footer>
+  <p>جميع الحقوق محفوظة &copy; | أ/ نور الدين - سلسلة الألفية في نحو الثانوية</p>
+  <p>للتواصل: <a href="tel:01273339922">01273339922</a></p>
+</footer>
+<div class="toast" id="toast"></div>
+
+<script>
+// لإضافة درس جديد: أضف سطرًا في الصف المناسب { path: "المجلد/", title: "اسم الدرس", note: "وصف قصير" }
+const SITE = "https://darsfele3ba4-debug.github.io/nooreldin/";
+const ROOT = "../"; // الصفحة الرئيسية داخل مجلد home والدروس في المجلد الأعلى
+const GRADES = [
+  { name: "الصف الثالث الإعدادي", tag: "النحو", lessons: [
+    { path: "prep3/01/", title: "اسم الفاعل", note: "الوحدة الأولى" },
+    { path: "prep3/02/", title: "اسم المفعول", note: "الوحدة الأولى" },
+    { path: "prep3/03/", title: "صيغ المبالغة", note: "الوحدة الثانية" },
+    { path: "prep3/04/", title: "اسم الزمان", note: "الوحدة الثالثة" },
+    { path: "prep3/05/", title: "اسم المكان", note: "الوحدة الثانية" },
+    { path: "prep3/06/", title: "اسم الآلة", note: "الوحدة الثالثة" }
+  ]},
+  { name: "الصف الأول الثانوي", tag: "النحو", lessons: [
+    { path: "sec1/01/", title: "كان وأخواتها", note: "القواعد النحوية - الدرس الأول" }
+  ]},
+  { name: "الصف الثاني الثانوي", tag: "النحو", lessons: [
+    { path: "", title: "الأسماء الخمسة", note: "الوحدة الأولى" }
+  ]},
+  { name: "الصف الثالث الثانوي", tag: "الأدب", lessons: [
+    { path: "sec3/01/", title: "مدرسة الإحياء والبعث", note: "الكلاسيكية الجديدة وجيل التطوير" }
+  ]}
+];
+
+const ICON_OPEN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 3 20 12 6 21 6 3"/></svg>';
+const ICON_COPY = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>';
+
+function fullUrl(path){
+  if (location.protocol === "http:" || location.protocol === "https:") return new URL(ROOT + path, location.href).href;
+  return SITE + path;
+}
+function toast(msg){
+  const t = document.getElementById("toast"); t.textContent = msg; t.classList.add("show");
+  clearTimeout(toast.h); toast.h = setTimeout(() => t.classList.remove("show"), 2200);
+}
+async function copyLink(path, btn){
+  const url = fullUrl(path); let ok = false;
+  try { await navigator.clipboard.writeText(url); ok = true; } catch(e) {
+    const ta = document.createElement("textarea"); ta.value = url; ta.setAttribute("readonly",""); ta.style.position = "fixed"; ta.style.opacity = "0";
+    document.body.appendChild(ta); ta.select();
+    try { ok = document.execCommand("copy"); } catch(_) {}
+    ta.remove();
+  }
+  if (ok) {
+    btn.classList.add("done"); btn.innerHTML = "✓ تم النسخ"; toast("تم نسخ رابط الدرس");
+    setTimeout(() => { btn.classList.remove("done"); btn.innerHTML = ICON_COPY + " نسخ الرابط"; }, 1800);
+  } else { prompt("انسخ الرابط:", url); }
+}
+const main = document.getElementById("main");
+GRADES.forEach(g => {
+  const sec = document.createElement("section"); sec.className = "grade";
+  sec.innerHTML = `<h2>${g.name} <small>${g.tag}</small></h2><div class="grid"></div>`;
+  const grid = sec.querySelector(".grid");
+  g.lessons.forEach((l, i) => {
+    const c = document.createElement("div"); c.className = "card";
+    c.innerHTML = `<div class="top"><div class="num">${i + 1}</div><div><h3>${l.title}</h3><p>${l.note}</p></div></div>
+      <div class="actions"><a class="btn open" href="${ROOT + l.path}">${ICON_OPEN} ادخل الدرس</a><button class="btn copy" type="button">${ICON_COPY} نسخ الرابط</button></div>`;
+    c.querySelector(".copy").addEventListener("click", e => copyLink(l.path, e.currentTarget));
+    grid.appendChild(c);
+  });
+  main.appendChild(sec);
+});
+</script>
+</body>
+</html>

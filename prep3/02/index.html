@@ -1,0 +1,3398 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>اسم المفعول | الصف الثالث الإعدادي | أ/ نور الدين</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #9a3412;      
+            --primary-light: #ea580c; 
+            --secondary: #7c2d12;    
+            --success: #10b981;      
+            --danger: #ef4444;       
+            --warning: #f59e0b;      
+            --dark: #1c1917;         
+            --light: #f8fafc;
+            --card-bg: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            font-family: 'Cairo', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background-color: #fff7ed;
+            background-image: radial-gradient(#fdba74 1.5px, transparent 1.5px);
+            background-size: 25px 25px;
+            color: var(--dark);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        .hidden { display: none !important; }
+        
+        .header-main {
+            background: linear-gradient(135deg, #1c0a03, var(--primary), var(--secondary));
+            color: white;
+            padding: 30px 20px 90px 20px; 
+            text-align: center;
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .title-line1 {
+            font-size: clamp(1.1rem, 4vw, 1.5rem); 
+            font-weight: 700;
+            color: #ffedd5;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-shadow: 1px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .title-line2 {
+            font-size: clamp(1.5rem, 5.2vw, 2.6rem); 
+            font-weight: 900;
+            background: linear-gradient(to right, #fed7aa, #f59e42);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 15px;
+            filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.5));
+            line-height: 1.3;
+        }
+
+        .header-main h2 { font-size: clamp(1rem, 3vw, 1.3rem); font-weight: 600; color: #fff7ed; margin-bottom: 8px; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);}
+        .header-main p { font-size: clamp(0.9rem, 2.5vw, 1.1rem); font-weight: 600; background: rgba(0,0,0,0.3); display: inline-block; padding: 6px 20px; border-radius: 30px; border: 1px solid rgba(255,255,255,0.15); box-shadow: 0 4px 6px rgba(0,0,0,0.1);}
+
+        .header-wave {
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: auto;
+            z-index: 1;
+        }
+
+        .btn {
+            background: linear-gradient(to bottom, var(--primary-light), var(--primary));
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-bottom: 3px solid rgba(0,0,0,0.3);
+        }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 12px rgba(0,0,0,0.2); }
+        .btn:active { transform: translateY(2px); border-bottom: 0px; margin-top: 3px; }
+        .btn-correct { filter: brightness(1.2); pointer-events: none; border-bottom-width: 0; transform: translateY(2px);}
+        .btn-wrong { filter: brightness(0.8); pointer-events: none; border-bottom-width: 0; transform: translateY(2px);}
+
+        #home-screen {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .grid-menu {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            width: 100%;
+            max-width: 1200px;
+            padding-bottom: 80px;
+        }
+
+        .menu-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05), 0 4px 6px -2px rgba(0,0,0,0.025);
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+        .menu-card::before {
+            content: ""; position: absolute; top: 0; left: 0; right: 0; height: 6px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            opacity: 0; transition: opacity 0.3s;
+        }
+        .menu-card:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: rgba(234, 88, 12, 0.35); }
+        .menu-card:hover::before { opacity: 1; }
+        
+        .menu-card .icon-container {
+            width: 80px; height: 80px;
+            margin: 0 auto 15px auto;
+            background: linear-gradient(135deg, #ffedd5, #fed7aa);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: inset 0 3px 6px rgba(255,255,255,0.8), 0 4px 8px rgba(0,0,0,0.05);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .menu-card .icon-container svg {
+            width: 40px; height: 40px; stroke: #9a3412; fill: none;
+            stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+        }
+        .menu-card:hover .icon-container { transform: scale(1.1) rotate(10deg); }
+        .menu-card h3 { font-size: 1.3rem; color: var(--dark); font-weight: 800; margin-bottom: 8px;}
+        .menu-card p { font-size: 0.95rem; color: #64748b; font-weight: 600;}
+
+        #game-screen {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .game-nav {
+            background: white;
+            padding: 15px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            font-size: clamp(0.9rem, 3vw, 1.2rem);
+        }
+        .back-btn { background: #e2e8f0; color: var(--dark); border-bottom: 3px solid #cbd5e1; padding: 8px 15px;}
+        #game-progress { background: #ea580c; color: white; padding: 6px 15px; border-radius: 20px;}
+        
+        .game-container {
+            flex: 1;
+            padding: 0 20px 40px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .question-box {
+            background: white;
+            padding: 20px 25px;
+            border-radius: 16px;
+            text-align: center;
+            font-size: clamp(1.1rem, 3.6vw, 1.5rem);
+            font-weight: 800;
+            color: #9a3412;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05);
+            border-right: 8px solid #7c2d12;
+            line-height: 1.7;
+        }
+
+        .shake { animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both; }
+        @keyframes shake {
+            10%, 90% { transform: translate3d(-2px, 0, 0); }
+            20%, 80% { transform: translate3d(4px, 0, 0); }
+            30%, 50%, 70% { transform: translate3d(-6px, 0, 0); }
+            40%, 60% { transform: translate3d(6px, 0, 0); }
+        }
+
+        .options-grid { display: flex; flex-direction: column; gap: 15px; }
+        .options-grid .btn { padding: 18px; font-size: clamp(1rem, 3.2vw, 1.3rem); text-align: right; justify-content: flex-start; border-radius: 12px;}
+
+        .tf-grid { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+
+        .bubbles-area {
+            position: relative; height: 400px;
+            background: linear-gradient(to bottom, #1c0a03, #9a3412);
+            border-radius: 16px; overflow: hidden;
+            border: 4px solid #ea580c; margin-top: 10px;
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
+        }
+        .bubble {
+            position: absolute;
+            background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.9), rgba(255,237,213,0.92));
+            color: #9a3412;
+            border: 2px solid #ffffff;
+            padding: 10px 5px;
+            border-radius: 30px;
+            font-weight: 800; font-size: clamp(0.8rem, 1.9vw, 1rem);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.2), inset -4px -4px 10px rgba(0,0,0,0.1);
+            cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            text-align: center;
+            width: 22%;
+            transition: transform 0.2s, background 0.2s;
+            z-index: 5;
+        }
+        .bubble:hover { transform: scale(1.05); }
+        .bubble::after {
+            content: ''; position: absolute; top: 10%; left: 15%;
+            width: 20%; height: 20%; background: rgba(255,255,255,0.8);
+            border-radius: 50%; filter: blur(2px);
+        }
+
+        .shooting-area {
+            position: relative; height: 400px; background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><rect fill="%23fffbeb" width="100%" height="100%"/><circle fill="%23fed7aa" cx="20%" cy="30%" r="50"/><circle fill="%23fed7aa" cx="80%" cy="60%" r="70"/><circle fill="%23fed7aa" cx="50%" cy="80%" r="40"/></svg>') no-repeat center center;
+            background-size: cover; border-radius: 16px; overflow: hidden;
+            border: 4px solid #ea580c; margin-top: 10px; box-shadow: inset 0 0 20px rgba(0,0,0,0.1);
+        }
+        .target-bird {
+            position: absolute; background: white; color: var(--dark);
+            padding: 10px 20px; border-radius: 30px; font-weight: 800; font-size: clamp(0.85rem, 2.7vw, 1.05rem);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.15); cursor: crosshair;
+            border: 3px solid var(--warning); white-space: nowrap; transition: background 0.2s;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .target-bird:hover { transform: scale(1.05); background: #fffbeb; }
+
+        /* تحدي العباقرة */
+        .genius-box { border: 3px solid var(--warning) !important; background: linear-gradient(135deg, #fffbeb, #ffffff); }
+        .genius-timer-wrap { width: 100%; height: 16px; background: #e2e8f0; border-radius: 10px; overflow: hidden; margin-bottom: 22px; box-shadow: inset 0 2px 4px rgba(0,0,0,0.1); }
+        .genius-timer-bar { height: 100%; background: linear-gradient(to right, #10b981, var(--warning), var(--danger)); width: 100%; transition: width 0.1s linear; border-radius: 10px; }
+        .genius-hint { text-align: center; margin-top: 15px; color: var(--warning); font-weight: bold; font-size: 1.1rem; display: flex; align-items: center; justify-content: center; gap: 8px; }
+
+        .overlay {
+            position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(4px);
+            display: flex; justify-content: center; align-items: center;
+            z-index: 1000; opacity: 0; pointer-events: none; transition: opacity 0.3s ease;
+        }
+        .overlay.active { opacity: 1; pointer-events: all; }
+        .modal {
+            background: white; padding: 40px; border-radius: 25px;
+            text-align: center; max-width: 90%; width: 400px;
+            transform: scale(0.7) translateY(50px); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+        }
+        .overlay.active .modal { transform: scale(1) translateY(0); }
+        .modal-icon { display: flex; justify-content: center; margin-bottom: 20px; }
+
+        .errors-list::-webkit-scrollbar { width: 8px; }
+        .errors-list::-webkit-scrollbar-track { background: #f1f5f9; border-radius: 8px; }
+        .errors-list::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 8px; }
+        .errors-list::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+        .footer-main {
+            background: var(--dark); color: #cbd5e1;
+            text-align: center; padding: 25px 20px; margin-top: auto;
+            border-top: 4px solid var(--primary);
+        }
+        .footer-main p { margin: 5px 0; font-size: 1.1rem; font-weight: 600;}
+        .footer-main .designer { font-size: 1rem; color: #94a3b8; font-weight: 400;}
+
+        .whatsapp-float {
+            position: fixed; bottom: 25px; left: 25px;
+            background: #25d366; color: white;
+            width: 65px; height: 65px; border-radius: 50%;
+            display: flex; justify-content: center; align-items: center;
+            text-decoration: none; box-shadow: 0 8px 15px rgba(37, 211, 102, 0.4);
+            z-index: 100; transition: all 0.3s;
+        }
+        .whatsapp-float:hover { transform: scale(1.15) rotate(-5deg); box-shadow: 0 12px 20px rgba(37, 211, 102, 0.6); }
+        .whatsapp-float svg { width: 35px; height: 35px; fill: currentColor; }
+
+        .send-result-box {
+            margin-top: 25px; background: #f0fdf4; border: 2px dashed #25d366;
+            border-radius: 15px; padding: 20px;
+        }
+        .send-result-box h3 { color: #128c7e; margin-bottom: 12px; font-size: 1.2rem; }
+        .name-input {
+            width: 100%; padding: 14px; border-radius: 10px; border: 2px solid #cbd5e1;
+            font-size: 1.05rem; font-family: 'Cairo', sans-serif; text-align: center; margin-bottom: 12px;
+        }
+        .name-input:focus { outline: none; border-color: #25d366; }
+        .whatsapp-send-btn {
+            width: 100%; background: linear-gradient(to bottom, #25d366, #128c7e);
+            border-bottom: 3px solid #0d6b5f;
+        }
+        .name-warning { color: var(--danger); font-size: 0.9rem; margin-top: 8px; font-weight: bold; }
+
+        .confetti {
+            position: fixed; top: -10px; width: 12px; height: 12px; z-index: 9999;
+            animation: fall linear forwards; border-radius: 3px;
+        }
+        @keyframes fall { to { transform: translateY(110vh) rotate(720deg); opacity: 0; } }
+            .round-badge { display:inline-block; margin-top:12px; padding:5px 14px; border-radius:999px; background:#fff7ed; color:#c2410c; border:1px solid #fdba74; font-weight:800; font-size:.9rem; }
+        .bubble span { line-height:1.35; }
+
+        .teacher-photo{width:clamp(160px,46vw,250px);height:clamp(160px,46vw,250px);border-radius:50%;border:5px solid #fbbf24;box-shadow:0 0 0 8px rgba(251,191,36,.25),0 10px 25px rgba(0,0,0,.5);object-fit:cover;object-position:center top;background:#fff;flex-shrink:0}
+        .series{font-size:clamp(1rem,4vw,1.4rem);font-weight:800;color:#fed7aa;background:rgba(0,0,0,.3);border:1px solid rgba(251,191,36,.45);padding:5px 18px;border-radius:30px;margin-bottom:8px}
+        .teacher-name{font-size:clamp(2.4rem,11vw,4.3rem);font-weight:900;background:linear-gradient(to right,#fde047,#f59e0b);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(2px 4px 6px rgba(0,0,0,.5));line-height:1.2;margin-bottom:4px}
+        .teacher-role{font-size:clamp(1rem,3.5vw,1.25rem);font-weight:700;color:#ffedd5;margin-bottom:10px}
+        .lesson-badge{display:inline-block;margin:4px auto 8px;padding:6px 22px;border-radius:999px;background:rgba(255,255,255,.14);border:2px solid #f59e0b;color:#fed7aa;font-weight:900;font-size:1.3rem}
+        .footer-main a{color:#fbbf24;text-decoration:none;font-weight:800;direction:ltr;display:inline-block}
+        .target-bird{white-space:normal;max-width:82%;line-height:1.5}
+        .target-bird svg{flex-shrink:0}
+        .send-result-box{background:#fff7ed;border-color:#25d366}
+        .send-result-box h3{color:#9a3412;font-weight:900}
+        .game-nav{gap:8px;padding:12px 16px}
+        #game-progress{white-space:nowrap}
+        @media(max-width:600px){ .whatsapp-float{width:50px;height:50px;bottom:14px;left:14px} .whatsapp-float svg{width:28px;height:28px} .tf-grid .btn{min-width:0!important;padding:22px 10px!important} .game-container{padding:0 12px 40px} }
+    </style>
+</head>
+<body>
+
+    <header class="header-main" id="main-header">
+        <div class="header-content">
+            <div style="display:flex;align-items:center;justify-content:center;gap:clamp(18px,5vw,45px);flex-wrap:wrap;">
+                <img class="teacher-photo" src="data:image/jpeg;base64,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" alt="أ/ نور الدين">
+                <div style="display:flex;flex-direction:column;align-items:center;text-align:center;">
+                    <div class="series">سلسلة الألفية في نحو الثانوية</div>
+                    <h1 class="teacher-name">أ/ نور الدين</h1>
+                    <div class="teacher-role">معلم اللغة العربية</div>
+                    <p class="lesson-badge">✒️ اسم المفعول</p>
+                    <h2>الصَّفُّ الثَّالِثُ الإِعْدَادِيُّ - الوحدة الأولى</h2>
+                    <p style="margin-top: 10px;">القواعد النحوية • 🎲 كل لعبة 20 سؤالًا تتغير عشوائيًّا من بنك 50 سؤالًا</p>
+                </div>
+            </div>
+        </div>
+        <svg class="header-wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#fff7ed" fill-opacity="1" d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,170.7C960,160,1056,192,1152,208C1248,224,1344,224,1392,224L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+    </header>
+
+    <div id="home-screen">
+        <div class="grid-menu" id="menu-grid"></div>
+    </div>
+
+    <div id="game-screen" class="hidden">
+        <div class="game-nav">
+            <button class="btn back-btn" onclick="returnToMenu()">
+                <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                رجوع
+            </button>
+            <strong id="game-title">عنوان اللعبة</strong>
+            <span id="game-progress">1 / 20</span>
+        </div>
+        <div class="game-container" id="game-container"></div>
+    </div>
+
+    <div class="overlay" id="feedback-modal">
+        <div class="modal">
+            <div class="modal-icon" id="feedback-icon"></div>
+            <h2 id="feedback-title" style="font-size: 2.5rem; font-weight: 900;">إجابة صحيحة!</h2>
+        </div>
+    </div>
+
+    <footer class="footer-main" id="main-footer">
+        <p>جميع الحقوق محفوظة &copy; | أ/ نور الدين - سلسلة الألفية في نحو الثانوية</p>
+        <p class="designer">للتواصل: <a href="tel:01273339922">01273339922</a></p>
+    </footer>
+
+    <a href="https://wa.me/201273339922" class="whatsapp-float" target="_blank" title="تواصل معنا">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.656.843 5.12 2.26 7.15L.626 24l5.01-1.61c1.983 1.25 4.27 1.91 6.395 1.91 6.646 0 12.03-5.385 12.03-12.031S18.677 0 12.031 0zm6.544 17.202c-.273.766-1.58 1.464-2.185 1.503-.56.035-1.28.23-4.085-.86-3.39-1.32-5.59-4.78-5.736-4.97-.145-.19-1.37-1.82-1.37-3.475 0-1.655.857-2.47 1.164-2.8.307-.33.67-.413.89-.413.22 0 .44 0 .633.01.205.01.482-.08.736.53.264.634.904 2.203.984 2.366.08.163.133.353.033.553-.1.2-.153.326-.307.506-.154.18-.32.38-.453.506-.153.153-.314.316-.134.626.18.31.8 1.32 1.71 2.13.176.157.363.31.558.45 1.05.76 1.83 1.05 2.13 1.18.3.13.474.11.652-.09.18-.205.766-.893.97-1.2.204-.307.41-.256.69-.153.28.103 1.77.836 2.074.99.304.153.506.23.582.356.076.126.076.73-.197 1.496z"/>
+        </svg>
+    </a>
+
+<script>
+    const LESSON_FULL_NAME = "اسم المفعول - الوحدة الأولى - الصف الثالث الإعدادي";
+    const LESSON_KEY = "nour-prep3-02";
+    const TEACHER_WHATSAPP = "201273339922";
+    const QUESTIONS_PER_ROUND = 20;
+    const allGamesData = [
+ {
+  "id": "g1_shooting",
+  "title": "التنشين والاصطياد: صوّب اسم المفعول",
+  "type": "shooting",
+  "desc": "اصطد اسم المفعول الصحيح من الفعل",
+  "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><circle cx=\"12\" cy=\"12\" r=\"10\"></circle><circle cx=\"12\" cy=\"12\" r=\"6\"></circle><circle cx=\"12\" cy=\"12\" r=\"2\"></circle></svg>",
+  "questions": [
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ (كَتَبَ):",
+    "options": [
+     "مَكْتَب",
+     "كِتَاب",
+     "كَاتِب",
+     "مَكْتُوب"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ (حَفِظَ):",
+    "options": [
+     "حَافِظ",
+     "حُفَّاظ",
+     "حَفِيظ",
+     "مَحْفُوظ"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ (أَكْرَمَ):",
+    "options": [
+     "كَرِيم",
+     "مُكْرَم",
+     "كَارِم",
+     "مُكْرِم"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ (احْتَرَمَ):",
+    "options": [
+     "مُحْتَرِم",
+     "احْتِرَام",
+     "مُحْتَرَم",
+     "حُرْمَة"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ (قَالَ):",
+    "options": [
+     "مَقَال",
+     "قَوْل",
+     "مَقُول",
+     "قَائِل"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ (بَاعَ):",
+    "options": [
+     "بَائِع",
+     "مُبَاع",
+     "بَيْع",
+     "مَبِيع"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ (دَعَا):",
+    "options": [
+     "مَدْعُوّ",
+     "مُدَّعًى",
+     "دَاعٍ",
+     "دُعَاء"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ (رَمَى):",
+    "options": [
+     "رَامٍ",
+     "رِمَايَة",
+     "مَرْمًى",
+     "مَرْمِيّ"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ (اسْتَخْدَمَ):",
+    "options": [
+     "خَادِم",
+     "مُسْتَخْدِم",
+     "اسْتِخْدَام",
+     "مُسْتَخْدَم"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ (اسْتَقْبَلَ):",
+    "options": [
+     "مُسْتَقْبَل",
+     "اسْتِقْبَال",
+     "مُسْتَقْبِل",
+     "قَبُول"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ (عَلَّمَ):",
+    "options": [
+     "تَعْلِيم",
+     "مُعَلَّم",
+     "عَالِم",
+     "مُعَلِّم"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ (قَدَّرَ):",
+    "options": [
+     "تَقْدِير",
+     "مُقَدَّر",
+     "مُقَدِّر",
+     "قَادِر"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ (صَانَ):",
+    "options": [
+     "مَصُون",
+     "صَائِن",
+     "مُصَان",
+     "صِيَانَة"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ (وَعَدَ):",
+    "options": [
+     "مِيعَاد",
+     "وَعْد",
+     "وَاعِد",
+     "مَوْعُود"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ (قَرَأَ):",
+    "options": [
+     "مَقْرَأ",
+     "قَارِئ",
+     "قِرَاءَة",
+     "مَقْرُوء"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ (سَأَلَ):",
+    "options": [
+     "سُؤَال",
+     "سَائِل",
+     "مَسْؤُول",
+     "مَسْأَلَة"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ (مَدَّ):",
+    "options": [
+     "مَدِيد",
+     "مَمْدُود",
+     "مَدّ",
+     "مَادّ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ (أَعْطَى):",
+    "options": [
+     "عَاطٍ",
+     "مُعْطٍ",
+     "مُعْطًى",
+     "عَطَاء"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ (رَجَا):",
+    "options": [
+     "مَرْجُوّ",
+     "رَجَاء",
+     "مُرْجًى",
+     "رَاجٍ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ (هَدَى):",
+    "options": [
+     "هَادٍ",
+     "هِدَايَة",
+     "مَهْدِيّ",
+     "مُهْدًى"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ (شَكَرَ):",
+    "options": [
+     "شَكُور",
+     "شُكْر",
+     "شَاكِر",
+     "مَشْكُور"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ (نَصَرَ):",
+    "options": [
+     "نَصِير",
+     "نَصْر",
+     "مَنْصُور",
+     "نَاصِر"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ (أَرْسَلَ):",
+    "options": [
+     "مُرْسِل",
+     "إِرْسَال",
+     "رَسُول",
+     "مُرْسَل"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ (انْتَخَبَ):",
+    "options": [
+     "انْتِخَاب",
+     "مُنْتَخَب",
+     "مُنْتَخِب",
+     "نَاخِب"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ (اخْتَبَرَ):",
+    "options": [
+     "مُخْتَبِر",
+     "مُخْتَبَر",
+     "اخْتِبَار",
+     "خَبِير"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ (حَرَّرَ):",
+    "options": [
+     "تَحْرِير",
+     "مُحَرِّر",
+     "حُرّ",
+     "مُحَرَّر"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ (نَظَّمَ):",
+    "options": [
+     "مُنَظِّم",
+     "تَنْظِيم",
+     "مُنَظَّم",
+     "نَاظِم"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ (رَحِمَ):",
+    "options": [
+     "رَحْمَة",
+     "مَرْحُوم",
+     "رَاحِم",
+     "رَحِيم"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ (عَرَفَ):",
+    "options": [
+     "عِرْفَان",
+     "مَعْرُوف",
+     "مَعْرِفَة",
+     "عَارِف"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ (وَدَّ):",
+    "options": [
+     "وَدُود",
+     "مَوَدَّة",
+     "وَادّ",
+     "مَوْدُود"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "وَزْنُ اسْمِ الْمَفْعُولِ مِنَ الثُّلَاثِيِّ:",
+    "options": [
+     "مَفْعُول",
+     "فَاعِل",
+     "فَعِيل",
+     "مُفْعِل"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنَ الثُّلَاثِيِّ الْأَجْوَفِ (قَالَ):",
+    "options": [
+     "مَقُول (بِحَذْفِ الْوَاوِ الزَّائِدَةِ)",
+     "مَقْوُول",
+     "مَقَال",
+     "قَائِل"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنَ النَّاقِصِ الْوَاوِيِّ (دَعَا):",
+    "options": [
+     "مُدَّعًى",
+     "مَدْعِيّ",
+     "دَاعٍ",
+     "مَدْعُوّ"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنَ النَّاقِصِ الْيَائِيِّ (رَمَى):",
+    "options": [
+     "رَامٍ",
+     "مَرْمُوّ",
+     "مَرْمًى",
+     "مَرْمِيّ"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ فِي «الْكِتَابُ مَقْرُوءٌ»:",
+    "options": [
+     "لَا يُوجَدُ",
+     "مَقْرُوءٌ",
+     "الْكِتَابُ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ فِي «الْمُعَلِّمُ مُحْتَرَمٌ»:",
+    "options": [
+     "مُحْتَرَمٌ",
+     "لَا يُوجَدُ",
+     "الْمُعَلِّمُ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ فِي «الطَّالِبُ مُكْرَمٌ»:",
+    "options": [
+     "مُكْرَمٌ",
+     "لَا يُوجَدُ",
+     "الطَّالِبُ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ فِي «النِّيلُ مَعْرُوفٌ»:",
+    "options": [
+     "النِّيلُ",
+     "لَا يُوجَدُ",
+     "مَعْرُوفٌ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "فِعْلُ اسْمِ الْمَفْعُولِ (مُنْتَظَر):",
+    "options": [
+     "تَنَظَّرَ",
+     "نَظَرَ",
+     "نَاظَرَ",
+     "انْتَظَرَ"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "فِعْلُ اسْمِ الْمَفْعُولِ (مُسْتَقْبَل):",
+    "options": [
+     "تَقَبَّلَ",
+     "أَقْبَلَ",
+     "اسْتَقْبَلَ",
+     "قَبِلَ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "فِعْلُ اسْمِ الْمَفْعُولِ (مَبِيع):",
+    "options": [
+     "ابْتَاعَ",
+     "تَبَايَعَ",
+     "بَاعَ",
+     "بَايَعَ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "فِعْلُ اسْمِ الْمَفْعُولِ (مَدْعُوّ):",
+    "options": [
+     "تَدَاعَى",
+     "ادَّعَى",
+     "دَعَا",
+     "اسْتَدْعَى"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "فِعْلُ اسْمِ الْمَفْعُولِ (مُعَلَّم):",
+    "options": [
+     "عَلَّمَ",
+     "تَعَلَّمَ",
+     "أَعْلَمَ",
+     "عَلِمَ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«الْوَاجِبُ ........» (كَتَبَ):",
+    "options": [
+     "كِتَابٌ",
+     "مَكْتُوبٌ",
+     "كِتَابَةٌ",
+     "كَاتِبٌ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«الْحَقُّ ........» (نَصَرَ):",
+    "options": [
+     "نَصْرٌ",
+     "نَصِيرٌ",
+     "نَاصِرٌ",
+     "مَنْصُورٌ"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "«الضَّيْفُ ........» (أَكْرَمَ):",
+    "options": [
+     "مُكْرَمٌ",
+     "كَرَمٌ",
+     "مُكْرِمٌ",
+     "كَرِيمٌ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«الطَّعَامُ ........» (طَبَخَ):",
+    "options": [
+     "طَبَّاخٌ",
+     "مَطْبُوخٌ",
+     "طَبْخٌ",
+     "طَابِخٌ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«الْوَطَنُ ........» (حَمَى):",
+    "options": [
+     "حَامٍ",
+     "مَحْمِيٌّ",
+     "حِمًى",
+     "حِمَايَةٌ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«الْمَرِيضُ ........» (عَالَجَ):",
+    "options": [
+     "عَلِيلٌ",
+     "مُعَالِجٌ",
+     "مُعَالَجٌ",
+     "عِلَاجٌ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«الْفَائِزُ ........ » (كَرَّمَ):",
+    "options": [
+     "مُكَرِّمٌ",
+     "مُكَرَّمٌ",
+     "كَرِيمٌ",
+     "تَكْرِيمٌ"
+    ],
+    "ans": 1
+   }
+  ]
+ },
+ {
+  "id": "g2_true_false",
+  "title": "صح أم خطأ",
+  "type": "true_false",
+  "desc": "اختبر فهمك لاسم المفعول",
+  "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M22 11.08V12a10 10 0 1 1-5.93-9.14\"></path><polyline points=\"22 4 12 14.01 9 11.01\"></polyline></svg>",
+  "questions": [
+   {
+    "q": "اسْمُ الْمَفْعُولِ اسْمٌ مُشْتَقٌّ يَدُلُّ عَلَى مَنْ وَقَعَ عَلَيْهِ الْفِعْلُ.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ يَدُلُّ عَلَى مَنْ قَامَ بِالْفِعْلِ.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "يُصَاغُ اسْمُ الْمَفْعُولِ مِنَ الثُّلَاثِيِّ عَلَى وَزْنِ (مَفْعُول).",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "يُصَاغُ اسْمُ الْمَفْعُولِ مِنْ غَيْرِ الثُّلَاثِيِّ عَلَى وَزْنِ مُضَارِعِهِ مَعَ إِبْدَالِ حَرْفِ الْمُضَارَعَةِ مِيمًا مَضْمُومَةً وَفَتْحِ مَا قَبْلَ الْآخِرِ.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "يُصَاغُ اسْمُ الْمَفْعُولِ مِنْ غَيْرِ الثُّلَاثِيِّ بِكَسْرِ مَا قَبْلَ الْآخِرِ.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ (كَتَبَ) هُوَ (مَكْتُوب).",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ (أَكْرَمَ) هُوَ (مُكْرِم).",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ (أَكْرَمَ) هُوَ (مُكْرَم).",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ (قَالَ) هُوَ (مَقُول).",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ (بَاعَ) هُوَ (مَبِيع).",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ (دَعَا) هُوَ (مَدْعُوّ).",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ (رَمَى) هُوَ (مَرْمِيّ).",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ (رَمَى) هُوَ (مَرْمُوّ).",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ (اسْتَخْدَمَ) هُوَ (مُسْتَخْدَم).",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ (عَلَّمَ) هُوَ (مُعَلِّم).",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "الْفَرْقُ بَيْنَ (مُحْتَرِم) وَ(مُحْتَرَم) أَنَّ الْأَوَّلَ اسْمُ فَاعِلٍ وَالثَّانِيَ اسْمُ مَفْعُولٍ.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ يُصَاغُ مِنَ الْفِعْلِ الْمُتَعَدِّي غَالِبًا.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "(مَحْفُوظ) اسْمُ مَفْعُولٍ مِنْ (حَفِظَ).",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "(حَافِظ) اسْمُ مَفْعُولٍ مِنْ (حَفِظَ).",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "(مَسْؤُول) اسْمُ مَفْعُولٍ مِنْ (سَأَلَ).",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "(مَقْرُوء) اسْمُ مَفْعُولٍ مِنْ (قَرَأَ).",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "(مَمْدُود) اسْمُ مَفْعُولٍ مِنْ (مَدَّ).",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "(مُعْطًى) اسْمُ مَفْعُولٍ مِنْ (أَعْطَى).",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "(مَرْجُوّ) اسْمُ مَفْعُولٍ مِنْ (رَجَا).",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "(مُنْتَظَر) اسْمُ مَفْعُولٍ مِنْ (انْتَظَرَ).",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "(مُنْتَظِر) اسْمُ مَفْعُولٍ مِنْ (انْتَظَرَ).",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "فِي «الْكِتَابُ مَقْرُوءٌ» اسْمُ الْمَفْعُولِ (الْكِتَاب).",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "فِي «الْكِتَابُ مَقْرُوءٌ» اسْمُ الْمَفْعُولِ (مَقْرُوء).",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "فِي «الْمُعَلِّمُ مُحْتَرَمٌ» (مُحْتَرَم) اسْمُ مَفْعُولٍ.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "فِي «الطَّالِبُ الْمُجْتَهِدُ مُكْرَمٌ» اسْمُ الْفَاعِلِ (الْمُجْتَهِد) وَاسْمُ الْمَفْعُولِ (مُكْرَم).",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنَ الْأَجْوَفِ تُحْذَفُ مِنْهُ وَاوُ مَفْعُولٍ.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "(مَصُون) اسْمُ مَفْعُولٍ مِنْ (صَانَ).",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "(مَصْوُون) هِيَ الصُّورَةُ الصَّحِيحَةُ لِاسْمِ الْمَفْعُولِ مِنْ (صَانَ).",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "(مَوْعُود) اسْمُ مَفْعُولٍ مِنْ (وَعَدَ).",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "(مَشْكُور) اسْمُ مَفْعُولٍ مِنْ (شَكَرَ).",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "(شَكُور) اسْمُ مَفْعُولٍ مِنْ (شَكَرَ).",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "(مُرْسَل) اسْمُ مَفْعُولٍ مِنْ (أَرْسَلَ).",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "(مُنَظَّم) اسْمُ مَفْعُولٍ مِنْ (نَظَّمَ).",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ (مُخْتَار) قَدْ يَتَشَابَهُ مَعَ اسْمِ الْفَاعِلِ.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "(مُخْتَار) فِي «الْقَائِدُ مُخْتَارٌ مِنَ الشَّعْبِ» اسْمُ مَفْعُولٍ.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "(مُتَعَلَّم) اسْمُ مَفْعُولٍ مِنْ (تَعَلَّمَ) مِثْلَ: «الدَّرْسُ مُتَعَلَّمٌ».",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "(مَعْرُوف) اسْمُ مَفْعُولٍ مِنْ (عَرَفَ).",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "(مَعْرِفَة) اسْمُ مَفْعُولٍ.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "(مَحْمُود) اسْمُ مَفْعُولٍ مِنْ (حَمِدَ).",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "(حَامِد) اسْمُ مَفْعُولٍ مِنْ (حَمِدَ).",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "(مَهْدِيّ) اسْمُ مَفْعُولٍ مِنْ (هَدَى).",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنَ الْأَفْعَالِ الْمُشْتَقَّةِ.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنَ الْأَسْمَاءِ الْمُشْتَقَّةِ.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "(مُقَدَّر) اسْمُ مَفْعُولٍ مِنْ (قَدَّرَ).",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "(مُقَدِّر) اسْمُ مَفْعُولٍ مِنْ (قَدَّرَ).",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 1
+   }
+  ]
+ },
+ {
+  "id": "g3_mcq",
+  "title": "اختيار من متعدد: اسم المفعول",
+  "type": "mcq",
+  "desc": "اختر الإجابة الصحيحة",
+  "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z\"></path><path d=\"M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z\"></path></svg>",
+  "questions": [
+   {
+    "q": "اسْمُ الْمَفْعُولِ:",
+    "options": [
+     "مَصْدَرٌ",
+     "اسْمٌ يَدُلُّ عَلَى مَنْ قَامَ بِالْفِعْلِ",
+     "فِعْلٌ",
+     "اسْمٌ مُشْتَقٌّ يَدُلُّ عَلَى مَنْ وَقَعَ عَلَيْهِ الْفِعْلُ"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "وَزْنُ اسْمِ الْمَفْعُولِ مِنَ الثُّلَاثِيِّ:",
+    "options": [
+     "مُفْعِل",
+     "فَعِيل",
+     "فَاعِل",
+     "مَفْعُول"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "صِيَاغَةُ اسْمِ الْمَفْعُولِ مِنْ غَيْرِ الثُّلَاثِيِّ:",
+    "options": [
+     "عَلَى وَزْنِ الْمُضَارِعِ بِإِبْدَالِ حَرْفِ الْمُضَارَعَةِ مِيمًا مَضْمُومَةً وَفَتْحِ مَا قَبْلَ الْآخِرِ",
+     "عَلَى وَزْنِ فَاعِل",
+     "عَلَى وَزْنِ مَفْعُول",
+     "بِكَسْرِ مَا قَبْلَ الْآخِرِ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ «أَكْرَمَ»:",
+    "options": [
+     "مُكْرَم",
+     "كَرِيم",
+     "مَكْرُوم",
+     "مُكْرِم"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ «احْتَرَمَ»:",
+    "options": [
+     "مُحْتَرَم",
+     "مُحْتَرِم",
+     "مَحْرُوم",
+     "حَارِم"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ «قَالَ»:",
+    "options": [
+     "مَقْوُول",
+     "مَقَال",
+     "مَقُول",
+     "قَائِل"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ «بَاعَ»:",
+    "options": [
+     "مَبِيع",
+     "بَائِع",
+     "مَبْيُوع",
+     "مُبَاع"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ «دَعَا»:",
+    "options": [
+     "مَدْعُوّ",
+     "مَدْعِيّ",
+     "مُدَّعًى",
+     "دَاعٍ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ «رَمَى»:",
+    "options": [
+     "مَرْمًى",
+     "مَرْمُوّ",
+     "مَرْمِيّ",
+     "رَامٍ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ «اسْتَخْدَمَ»:",
+    "options": [
+     "مُسْتَخْدَم",
+     "خَادِم",
+     "مُسْتَخْدِم",
+     "اسْتِخْدَام"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ «عَلَّمَ»:",
+    "options": [
+     "مُعَلَّم",
+     "مُعَلِّم",
+     "مَعْلُوم",
+     "عَالِم"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ «عَلِمَ»:",
+    "options": [
+     "مَعْلُوم",
+     "عَلِيم",
+     "مُعَلَّم",
+     "عَالِم"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ «أَعْطَى»:",
+    "options": [
+     "مُعْطٍ",
+     "مُعْطًى",
+     "مَعْطِيّ",
+     "عَاطٍ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ «سَأَلَ»:",
+    "options": [
+     "مَسْؤُول",
+     "سَائِل",
+     "مَسْأُول",
+     "سُؤَال"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ «اخْتَارَ»:",
+    "options": [
+     "مَخْيُور",
+     "مُخْتَار",
+     "اخْتِيَار",
+     "خَائِر"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ «انْتَظَرَ»:",
+    "options": [
+     "نَاظِر",
+     "انْتِظَار",
+     "مُنْتَظَر",
+     "مُنْتَظِر"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "الْكَلِمَةُ الَّتِي هِيَ اسْمُ مَفْعُولٍ:",
+    "options": [
+     "قِرَاءَة",
+     "مَقْرُوء",
+     "قَارِئ",
+     "مَقْرَأ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "الْكَلِمَةُ الَّتِي لَيْسَتِ اسْمَ مَفْعُولٍ:",
+    "options": [
+     "مُرْسَل",
+     "مُعَلَّم",
+     "مَكْتُوب",
+     "كَاتِب"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "الْكَلِمَةُ الَّتِي هِيَ اسْمُ مَفْعُولٍ مِنْ فِعْلٍ أَجْوَفَ:",
+    "options": [
+     "مَوْعُود",
+     "مَقُول",
+     "مَكْتُوب",
+     "مَدْعُوّ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "الْكَلِمَةُ الَّتِي هِيَ اسْمُ مَفْعُولٍ مِنْ فِعْلٍ نَاقِصٍ:",
+    "options": [
+     "مَبِيع",
+     "مَقُول",
+     "مَوْعُود",
+     "مَرْمِيّ"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "الْكَلِمَةُ الَّتِي هِيَ اسْمُ مَفْعُولٍ مِنْ فِعْلٍ مِثَالٍ:",
+    "options": [
+     "مَرْمِيّ",
+     "مَقُول",
+     "مَدْعُوّ",
+     "مَوْعُود"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "فِعْلُ اسْمِ الْمَفْعُولِ «مُحَرَّر»:",
+    "options": [
+     "حَرَّ",
+     "تَحَرَّرَ",
+     "أَحَرَّ",
+     "حَرَّرَ"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "فِعْلُ اسْمِ الْمَفْعُولِ «مُسْتَعْمَل»:",
+    "options": [
+     "اسْتَعْمَلَ",
+     "تَعَامَلَ",
+     "عَمِلَ",
+     "أَعْمَلَ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "فِعْلُ اسْمِ الْمَفْعُولِ «مَصُون»:",
+    "options": [
+     "صَوَّتَ",
+     "صَوَّنَ",
+     "أَصَانَ",
+     "صَانَ"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "فِعْلُ اسْمِ الْمَفْعُولِ «مَرْجُوّ»:",
+    "options": [
+     "أَرْجَى",
+     "رَجَّى",
+     "رَجَا",
+     "ارْتَجَى"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«الدَّرْسُ ........ » (شَرَحَ):",
+    "options": [
+     "شَارِحٌ",
+     "شَرْحٌ",
+     "مَشْرُوحٌ",
+     "شُرُوحٌ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«الرِّسَالَةُ ........ » (أَرْسَلَ):",
+    "options": [
+     "مُرْسَلَةٌ",
+     "إِرْسَالٌ",
+     "مُرْسِلَةٌ",
+     "رَسُولٌ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«الْقَرَارُ ........ » (اتَّخَذَ):",
+    "options": [
+     "مُتَّخِذٌ",
+     "اتِّخَاذٌ",
+     "آخِذٌ",
+     "مُتَّخَذٌ"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "«الْمَكَانُ ........ » (نَظَّفَ):",
+    "options": [
+     "مُنَظِّفٌ",
+     "نَظِيفٌ",
+     "تَنْظِيفٌ",
+     "مُنَظَّفٌ"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "«الْوَطَنُ ........ » (حَمَى):",
+    "options": [
+     "حِمَايَةٌ",
+     "مَحْمِيٌّ",
+     "حَامٍ",
+     "مَحْمُوٌّ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«الْعَهْدُ ........ » (وَفَى):",
+    "options": [
+     "مَوْفِيٌّ بِهِ",
+     "وَفَاءٌ",
+     "وَافٍ",
+     "مُوفٍ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "الْفَرْقُ بَيْنَ (مُعَلِّم) وَ(مُعَلَّم):",
+    "options": [
+     "كِلْتَاهُمَا اسْمُ مَفْعُولٍ",
+     "لَا فَرْقَ",
+     "الْأُولَى اسْمُ فَاعِلٍ وَالثَّانِيَةُ اسْمُ مَفْعُولٍ",
+     "كِلْتَاهُمَا اسْمُ فَاعِلٍ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "الْفَرْقُ بَيْنَ (مُرْسِل) وَ(مُرْسَل):",
+    "options": [
+     "الْأُولَى اسْمُ مَفْعُولٍ",
+     "لَا فَرْقَ",
+     "كِلْتَاهُمَا مَصْدَرٌ",
+     "الْأُولَى اسْمُ فَاعِلٍ وَالثَّانِيَةُ اسْمُ مَفْعُولٍ"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ فِي «الطَّالِبُ الْمُجْتَهِدُ مَحْبُوبٌ»:",
+    "options": [
+     "لَا يُوجَدُ",
+     "مَحْبُوبٌ",
+     "الطَّالِبُ",
+     "الْمُجْتَهِدُ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "اسْمُ الْفَاعِلِ فِي «الطَّالِبُ الْمُجْتَهِدُ مَحْبُوبٌ»:",
+    "options": [
+     "مَحْبُوبٌ",
+     "الطَّالِبُ",
+     "الْمُجْتَهِدُ",
+     "لَا يُوجَدُ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ فِي «الدَّرْسُ مَفْهُومٌ وَالْمُعَلِّمُ مَشْكُورٌ»:",
+    "options": [
+     "مَفْهُومٌ - مَشْكُورٌ",
+     "مَفْهُومٌ فَقَطْ",
+     "لَا يُوجَدُ",
+     "الدَّرْسُ - الْمُعَلِّمُ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ «صَامَ»:",
+    "options": [
+     "صَائِم",
+     "صِيَام",
+     "مَصُوم",
+     "مَصْوُوم"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ «قَرَأَ»:",
+    "options": [
+     "مَقْرُوء",
+     "قَارِئ",
+     "قُرَّاء",
+     "مَقْرَأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ «عَدَّ»:",
+    "options": [
+     "مُعَدّ",
+     "عَدَد",
+     "مَعْدُود",
+     "عَادّ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ «تَنَاوَلَ»:",
+    "options": [
+     "نَاوَلَ",
+     "مُتَنَاوَل",
+     "تَنَاوُل",
+     "مُتَنَاوِل"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ «اسْتَشَارَ»:",
+    "options": [
+     "اسْتِشَارَة",
+     "مُسْتَشِير",
+     "شَائِر",
+     "مُسْتَشَار"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "«الْمُسْتَشَارُ أَمِينٌ» (الْمُسْتَشَار) هُنَا:",
+    "options": [
+     "اسْمُ مَفْعُولٍ",
+     "اسْمُ فَاعِلٍ",
+     "فِعْلٌ",
+     "مَصْدَرٌ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«الْمُسْتَشِيرُ لَا يَنْدَمُ» (الْمُسْتَشِير) هُنَا:",
+    "options": [
+     "مَصْدَرٌ",
+     "اسْمُ مَفْعُولٍ",
+     "فِعْلٌ",
+     "اسْمُ فَاعِلٍ"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنَ الْفِعْلِ اللَّازِمِ يُصَاغُ مَعَ:",
+    "options": [
+     "شِبْهِ الْجُمْلَةِ (مِثْلَ: مَذْهُوبٌ إِلَيْهِ)",
+     "الْفَاعِلِ",
+     "الْمَفْعُولِ بِهِ",
+     "لَا يُصَاغُ أَبَدًا"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«الْمَكَانُ مَذْهُوبٌ إِلَيْهِ» اسْمُ الْمَفْعُولِ:",
+    "options": [
+     "إِلَيْهِ",
+     "مَذْهُوبٌ",
+     "لَا يُوجَدُ",
+     "الْمَكَانُ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«الْأَمْرُ مَرْغُوبٌ فِيهِ» اسْمُ الْمَفْعُولِ:",
+    "options": [
+     "مَرْغُوبٌ",
+     "الْأَمْرُ",
+     "فِيهِ",
+     "لَا يُوجَدُ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«........ فِي الْخَيْرِ» اسْمُ مَفْعُولٍ مِنْ (رَغِبَ):",
+    "options": [
+     "مَرْغُوبٌ",
+     "رَغِيبٌ",
+     "رَغْبَةٌ",
+     "رَاغِبٌ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«الشَّهِيدُ ........ عِنْدَ رَبِّهِ» اسْمُ مَفْعُولٍ مِنْ (رَزَقَ):",
+    "options": [
+     "رَازِقٌ",
+     "رِزْقٌ",
+     "مَرْزُوقٌ",
+     "رَزَّاقٌ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«النَّصْرُ ........ » اسْمُ مَفْعُولٍ مِنْ (حَقَّقَ):",
+    "options": [
+     "مُحَقِّقٌ",
+     "حَقِيقٌ",
+     "مُحَقَّقٌ",
+     "تَحْقِيقٌ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«الْعَمَلُ ........ » اسْمُ مَفْعُولٍ مِنْ (أَتْقَنَ):",
+    "options": [
+     "تَقِينٌ",
+     "إِتْقَانٌ",
+     "مُتْقَنٌ",
+     "مُتْقِنٌ"
+    ],
+    "ans": 2
+   }
+  ]
+ },
+ {
+  "id": "g4_genius",
+  "title": "تحدي العباقرة",
+  "type": "genius",
+  "desc": "تطبيقات أعمق على اسم المفعول - سباق مع الوقت!",
+  "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><polygon points=\"13 2 3 14 12 14 11 22 21 10 12 10 13 2\"></polygon></svg>",
+  "questions": [
+   {
+    "q": "اسْمَا الْمَفْعُولِ مِنْ «عَلِمَ» وَ«عَلَّمَ» عَلَى التَّرْتِيبِ:",
+    "options": [
+     "عَالِم - مُعَلِّم",
+     "مَعْلُوم - مُعَلَّم",
+     "مَعْلُوم - مُعَلِّم",
+     "عَلِيم - مُعَلَّم"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "أَسْمَاءُ الْمَفْعُولِ مِنْ «خَرَجَ» وَ«أَخْرَجَ» وَ«اسْتَخْرَجَ»:",
+    "options": [
+     "خُرُوج - مُخْرَج - مُسْتَخْرِج",
+     "مَخْرَج - إِخْرَاج - اسْتِخْرَاج",
+     "خَارِج - مُخْرِج - مُسْتَخْرِج",
+     "مَخْرُوج (بِهِ) - مُخْرَج - مُسْتَخْرَج"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "الْفَرْقُ بَيْنَ «الْمُخْتَرِعُ مُبْدِعٌ» وَ«الْمُخْتَرَعُ مُفِيدٌ»:",
+    "options": [
+     "كِلْتَاهُمَا اسْمُ فَاعِلٍ",
+     "كِلْتَاهُمَا اسْمُ مَفْعُولٍ",
+     "لَا فَرْقَ",
+     "الْأُولَى اسْمُ فَاعِلٍ وَالثَّانِيَةُ اسْمُ مَفْعُولٍ"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "«الْقَائِدُ الْمُخْتَارُ مِنَ الشَّعْبِ» (الْمُخْتَار):",
+    "options": [
+     "مَصْدَرٌ",
+     "فِعْلٌ",
+     "اسْمُ مَفْعُولٍ",
+     "اسْمُ فَاعِلٍ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«الشَّعْبُ الْمُخْتَارُ قَائِدَهُ» (الْمُخْتَار) هُنَا:",
+    "options": [
+     "مَصْدَرٌ",
+     "اسْمُ فَاعِلٍ",
+     "فِعْلٌ",
+     "اسْمُ مَفْعُولٍ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "لِمَاذَا تَتَشَابَهُ (مُخْتَار) فِي الْحَالَتَيْنِ؟",
+    "options": [
+     "لِأَنَّهَا مَصْدَرٌ",
+     "لِأَنَّهَا مِنَ الثُّلَاثِيِّ",
+     "لَا تَتَشَابَهُ",
+     "لِأَنَّ مَا قَبْلَ الْآخِرِ أَلِفٌ فَلَا تَظْهَرُ عَلَيْهِ الْكَسْرَةُ أَوِ الْفَتْحَةُ"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ «صَانَ» وَلِمَاذَا حُذِفَتِ الْوَاوُ؟",
+    "options": [
+     "صَائِن - اسْمُ فَاعِلٍ",
+     "مَصْوُون - لَمْ تُحْذَفْ",
+     "صِيَانَة - مَصْدَرٌ",
+     "مَصُون - حُذِفَتْ وَاوُ مَفْعُولٍ لِالْتِقَاءِ السَّاكِنَيْنِ"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ «هَابَ»:",
+    "options": [
+     "مَهُوب",
+     "هَائِب",
+     "هَيْبَة",
+     "مَهِيب"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ «لَامَ»:",
+    "options": [
+     "لَوْم",
+     "مَلُوم",
+     "لَائِم",
+     "مُلَام"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ «زَارَ»:",
+    "options": [
+     "زَائِر",
+     "مَزُور",
+     "مَزَار",
+     "زِيَارَة"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ «رَضِيَ»:",
+    "options": [
+     "مَرْضِيّ",
+     "رَاضٍ",
+     "مَرْضُوّ",
+     "رِضًا"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ «نَسِيَ»:",
+    "options": [
+     "نِسْيَان",
+     "مَنْسِيّ",
+     "مَنْسُوّ",
+     "نَاسٍ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ مِنْ «غَزَا»:",
+    "options": [
+     "غَزْو",
+     "مَغْزِيّ",
+     "غَازٍ",
+     "مَغْزُوّ"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "«هَذَا كِتَابٌ مَقْرُوءٌ وَرِسَالَةٌ مَكْتُوبَةٌ» عَدَدُ أَسْمَاءِ الْمَفْعُولِ:",
+    "options": [
+     "وَاحِدٌ",
+     "لَا يُوجَدُ",
+     "اثْنَانِ",
+     "ثَلَاثَةٌ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«الْمُعَلِّمُ الْمُحْتَرَمُ مُحْتَرِمٌ لِطُلَّابِهِ» اسْمُ الْفَاعِلِ وَاسْمُ الْمَفْعُولِ:",
+    "options": [
+     "كِلَاهُمَا فَاعِلٌ",
+     "كِلَاهُمَا مَفْعُولٌ",
+     "الْمُعَلِّمُ مَفْعُولٌ",
+     "مُحْتَرِمٌ فَاعِلٌ - الْمُحْتَرَمُ مَفْعُولٌ"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "الْخَطَأُ فِي «اسْمُ الْمَفْعُولِ مِنْ أَعْطَى: مُعْطٍ»:",
+    "options": [
+     "الصَّوَابُ مُعْطًى بِفَتْحِ مَا قَبْلَ الْآخِرِ",
+     "الصَّوَابُ عَاطٍ",
+     "لَا خَطَأَ",
+     "الصَّوَابُ مَعْطِيّ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "الْخَطَأُ فِي «اسْمُ الْمَفْعُولِ مِنْ قَالَ: مَقْوُول»:",
+    "options": [
+     "لَا خَطَأَ",
+     "الصَّوَابُ مَقَال",
+     "الصَّوَابُ مَقُول بِحَذْفِ وَاوِ مَفْعُولٍ",
+     "الصَّوَابُ قَائِل"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "الْخَطَأُ فِي «اسْمُ الْمَفْعُولِ مِنْ رَمَى: مَرْمُوّ»:",
+    "options": [
+     "الصَّوَابُ مَرْمًى",
+     "لَا خَطَأَ",
+     "الصَّوَابُ مَرْمِيّ لِأَنَّ الْفِعْلَ يَائِيٌّ",
+     "الصَّوَابُ رَامٍ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "الْخَطَأُ فِي «اسْمُ الْمَفْعُولِ مِنِ اسْتَقْبَلَ: مُسْتَقْبِل»:",
+    "options": [
+     "الصَّوَابُ اسْتِقْبَال",
+     "الصَّوَابُ قَابِل",
+     "الصَّوَابُ مُسْتَقْبَل بِفَتْحِ مَا قَبْلَ الْآخِرِ",
+     "لَا خَطَأَ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«الْكَرِيمُ ........ » اسْمُ مَفْعُولٍ مِنْ (حَمِدَ):",
+    "options": [
+     "حَمْدٌ",
+     "مَحْمُودٌ",
+     "حَامِدٌ",
+     "حَمِيدٌ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«الْخَائِنُ ........ » اسْمُ مَفْعُولٍ مِنْ (كَرِهَ):",
+    "options": [
+     "كَرَاهِيَةٌ",
+     "مَكْرُوهٌ",
+     "كَرِيهٌ",
+     "كَارِهٌ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«الطَّالِبُ النَّاجِحُ ........ » اسْمُ مَفْعُولٍ مِنْ (هَنَّأَ):",
+    "options": [
+     "تَهْنِئَةٌ",
+     "مُهَنَّأٌ",
+     "هَانِئٌ",
+     "مُهَنِّئٌ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«الدَّرْسُ ........ عِنْدَ الطُّلَّابِ» اسْمُ مَفْعُولٍ مِنْ (فَهِمَ):",
+    "options": [
+     "فَهِيمٌ",
+     "فَاهِمٌ",
+     "مَفْهُومٌ",
+     "فَهْمٌ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ الْمُؤَنَّثُ مِنْ «أَرْسَلَ»:",
+    "options": [
+     "رِسَالَة",
+     "مُرْسِلَة",
+     "مُرْسَلَة",
+     "إِرْسَال"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ الْجَمْعُ الْمُذَكَّرُ مِنْ «أَكْرَمَ»:",
+    "options": [
+     "مُكْرِمُونَ",
+     "مُكْرَمُونَ",
+     "مَكَارِم",
+     "كُرَمَاء"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ الْمُثَنَّى مِنْ «احْتَرَمَ» فِي حَالَةِ الرَّفْعِ:",
+    "options": [
+     "مُحْتَرَمُونَ",
+     "مُحْتَرَمَانِ",
+     "مُحْتَرِمَانِ",
+     "مُحْتَرَمَيْنِ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«الْأَبْطَالُ مُكَرَّمُونَ» نَوْعُ (مُكَرَّمُونَ):",
+    "options": [
+     "فِعْلٌ",
+     "اسْمُ مَفْعُولٍ جَمْعُ مُذَكَّرٍ سَالِمٌ",
+     "مَصْدَرٌ",
+     "اسْمُ فَاعِلٍ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«الْمُكَرِّمُونَ لِلْأَبْطَالِ كَثِيرُونَ» نَوْعُ (الْمُكَرِّمُونَ):",
+    "options": [
+     "اسْمُ مَفْعُولٍ",
+     "مَصْدَرٌ",
+     "اسْمُ فَاعِلٍ",
+     "فِعْلٌ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«الْمَرْجُوُّ مِنَ الطُّلَّابِ الِاجْتِهَادُ» نَوْعُ (الْمَرْجُوّ) وَفِعْلُهُ:",
+    "options": [
+     "اسْمُ مَفْعُولٍ - أَرْجَى",
+     "اسْمُ مَفْعُولٍ - رَجَا",
+     "مَصْدَرٌ - رَجَاء",
+     "اسْمُ فَاعِلٍ - رَجَا"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«........ مِنَ اللهِ الْعَوْنُ» اسْمُ مَفْعُولٍ مِنْ (سَأَلَ):",
+    "options": [
+     "السَّائِلُ",
+     "السُّؤَالُ",
+     "الْمَسْأَلَةُ",
+     "الْمَسْؤُولُ"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "«هَذَا الْأَمْرُ مُتَّفَقٌ عَلَيْهِ» اسْمُ الْمَفْعُولِ وَفِعْلُهُ:",
+    "options": [
+     "عَلَيْهِ - اتَّفَقَ",
+     "اتِّفَاق - وَفِقَ",
+     "مُتَّفَقٌ - اتَّفَقَ",
+     "مُتَّفِقٌ - اتَّفَقَ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«الْمَكَانُ مُنْتَظَرٌ فِيهِ» اسْمُ الْمَفْعُولِ:",
+    "options": [
+     "لَا يُوجَدُ",
+     "مُنْتَظَرٌ",
+     "الْمَكَانُ",
+     "فِيهِ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«الْوَطَنُ ........ بِالْأَرْوَاحِ» اسْمُ مَفْعُولٍ مِنْ (فَدَى):",
+    "options": [
+     "مَفْدُوٌّ",
+     "فَادٍ",
+     "فِدَاءٌ",
+     "مَفْدِيٌّ"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "«الْعَدُوُّ ........» اسْمُ مَفْعُولٍ مِنْ (هَزَمَ):",
+    "options": [
+     "مَهْزُومٌ",
+     "هَزُومٌ",
+     "هَازِمٌ",
+     "هَزِيمَةٌ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«........ عِنْدَ اللهِ الْمُتَّقُونَ» اسْمُ مَفْعُولٍ مِنْ (قَرَّبَ):",
+    "options": [
+     "الْمُقَرِّبُونَ",
+     "الْأَقَارِبُ",
+     "الْمُقَرَّبُونَ",
+     "الْقَرِيبُونَ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«الْكَنْزُ ........ تَحْتَ الْأَرْضِ» اسْمُ مَفْعُولٍ مِنْ (دَفَنَ):",
+    "options": [
+     "مَدْفُونٌ",
+     "دَافِنٌ",
+     "دَفِينٌ",
+     "دَفْنٌ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«السِّرُّ ........ » اسْمُ مَفْعُولٍ مِنْ (كَتَمَ):",
+    "options": [
+     "كَتُومٌ",
+     "كَاتِمٌ",
+     "مَكْتُومٌ",
+     "كِتْمَانٌ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«الرِّسَالَةُ ........ إِلَى الْأُمِّ» اسْمُ مَفْعُولٍ مِنْ (وَجَّهَ):",
+    "options": [
+     "تَوْجِيهٌ",
+     "مُوَجَّهَةٌ",
+     "مُوَجِّهَةٌ",
+     "وَجِيهَةٌ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«الطَّلَبُ ........» اسْمُ مَفْعُولٍ مِنْ (قَبِلَ):",
+    "options": [
+     "قَبُولٌ",
+     "مَقْبُولٌ",
+     "قَبِيلٌ",
+     "قَابِلٌ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«........ بَيْنَ النَّاسِ» اسْمُ مَفْعُولٍ مِنْ (حَبَّ):",
+    "options": [
+     "حَبِيبٌ",
+     "حُبٌّ",
+     "مَحْبُوبٌ",
+     "حَابٌّ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«الْمَرِيضُ ........ » اسْمُ مَفْعُولٍ مِنْ (شَفَى):",
+    "options": [
+     "شَافٍ",
+     "شِفَاءٌ",
+     "مَشْفُوٌّ",
+     "مَشْفِيٌّ"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "«الْمُسَافِرُ ........ » اسْمُ مَفْعُولٍ مِنْ (وَدَّعَ):",
+    "options": [
+     "وَدَاعٌ",
+     "مُوَدِّعٌ",
+     "مُوَدَّعٌ",
+     "وَدِيعٌ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«الْقِصَّةُ ........ » اسْمُ مَفْعُولٍ مِنْ (رَوَى):",
+    "options": [
+     "رِوَايَةٌ",
+     "رَاوِيَةٌ",
+     "مَرْوُوَّةٌ",
+     "مَرْوِيَّةٌ"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "«........ بِالْحُسْنَى» اسْمُ مَفْعُولٍ مِنْ (أَمَرَ) مَعَ حَرْفِ الْجَرِّ:",
+    "options": [
+     "أَمِيرٌ",
+     "مَأْمُورٌ",
+     "أَمْرٌ",
+     "آمِرٌ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«النِّيلُ ........ » اسْمُ مَفْعُولٍ مِنْ (قَدَّسَ) عِنْدَ الْقُدَمَاءِ:",
+    "options": [
+     "قِدِّيسٌ",
+     "مُقَدَّسٌ",
+     "مُقَدِّسٌ",
+     "تَقْدِيسٌ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«الْمُوَظَّفُ ........ » اسْمُ مَفْعُولٍ مِنْ (عَيَّنَ):",
+    "options": [
+     "عَيْنٌ",
+     "تَعْيِينٌ",
+     "مُعَيَّنٌ",
+     "مُعَيِّنٌ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«الْكِتَابُ ........ » اسْمُ مَفْعُولٍ مِنْ (طَبَعَ):",
+    "options": [
+     "طَابِعٌ",
+     "مَطْبُوعٌ",
+     "طَبِيعَةٌ",
+     "طِبَاعَةٌ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«الْأَسْعَارُ ........ » اسْمُ مَفْعُولٍ مِنْ (حَدَّدَ):",
+    "options": [
+     "حَادَّةٌ",
+     "مُحَدَّدَةٌ",
+     "مُحَدِّدَةٌ",
+     "تَحْدِيدٌ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ الَّذِي يَتَشَابَهُ مَعَ اسْمِ الْفَاعِلِ فِي الصُّورَةِ:",
+    "options": [
+     "مَكْتُوب",
+     "مُحْتَاج",
+     "مَقُول",
+     "مُكْرَم"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«الْجَائِزَةُ ........ لِلْفَائِزِينَ» اسْمُ مَفْعُولٍ مِنْ (مَنَحَ):",
+    "options": [
+     "مَانِحَةٌ",
+     "مِنْحَةٌ",
+     "مَمْنُوحَةٌ",
+     "مَنِيحَةٌ"
+    ],
+    "ans": 2
+   }
+  ]
+ },
+ {
+  "id": "g5_bubbles",
+  "title": "الفقاعات المتساقطة: اسم المفعول",
+  "type": "bubbles",
+  "desc": "اضغط فقاعة اسم المفعول الصحيح قبل أن تسقط",
+  "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M21.21 15.89A10 10 0 1 1 8 2.83\"></path><path d=\"M22 12A10 10 0 0 0 12 2v10z\"></path></svg>",
+  "questions": [
+   {
+    "q": "مِنْ (كَتَبَ):",
+    "options": [
+     "مَكْتُوب",
+     "كِتَاب",
+     "كَاتِب"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "مِنْ (شَرِبَ):",
+    "options": [
+     "شَرَاب",
+     "مَشْرُوب",
+     "شَارِب"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "مِنْ (فَهِمَ):",
+    "options": [
+     "فَهِيم",
+     "فَاهِم",
+     "مَفْهُوم"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "مِنْ (قَالَ):",
+    "options": [
+     "قَوْل",
+     "قَائِل",
+     "مَقُول"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "مِنْ (بَاعَ):",
+    "options": [
+     "بَيْع",
+     "مَبِيع",
+     "بَائِع"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "مِنْ (دَعَا):",
+    "options": [
+     "دُعَاء",
+     "دَاعٍ",
+     "مَدْعُوّ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "مِنْ (رَمَى):",
+    "options": [
+     "رَامٍ",
+     "مَرْمِيّ",
+     "رِمَايَة"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "مِنْ (أَكْرَمَ):",
+    "options": [
+     "كَرِيم",
+     "مُكْرِم",
+     "مُكْرَم"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "مِنْ (عَلَّمَ):",
+    "options": [
+     "عَالِم",
+     "مُعَلِّم",
+     "مُعَلَّم"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "مِنْ (احْتَرَمَ):",
+    "options": [
+     "مُحْتَرَم",
+     "مُحْتَرِم",
+     "حُرْمَة"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "مِنْ (اسْتَخْدَمَ):",
+    "options": [
+     "مُسْتَخْدِم",
+     "مُسْتَخْدَم",
+     "خَادِم"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "مِنْ (انْتَظَرَ):",
+    "options": [
+     "نَظَر",
+     "مُنْتَظِر",
+     "مُنْتَظَر"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "مِنْ (أَرْسَلَ):",
+    "options": [
+     "مُرْسَل",
+     "مُرْسِل",
+     "رِسَالَة"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "مِنْ (نَظَّمَ):",
+    "options": [
+     "مُنَظَّم",
+     "مُنَظِّم",
+     "نِظَام"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "مِنْ (صَانَ):",
+    "options": [
+     "مَصُون",
+     "صَائِن",
+     "صِيَانَة"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "مِنْ (وَعَدَ):",
+    "options": [
+     "وَاعِد",
+     "مَوْعُود",
+     "وَعْد"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "مِنْ (سَأَلَ):",
+    "options": [
+     "سَائِل",
+     "سُؤَال",
+     "مَسْؤُول"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "مِنْ (قَرَأَ):",
+    "options": [
+     "قَارِئ",
+     "قِرَاءَة",
+     "مَقْرُوء"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "مِنْ (مَدَّ):",
+    "options": [
+     "مَادّ",
+     "مَدّ",
+     "مَمْدُود"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "مِنْ (أَعْطَى):",
+    "options": [
+     "مُعْطًى",
+     "عَطَاء",
+     "مُعْطٍ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "مِنْ (رَجَا):",
+    "options": [
+     "رَاجٍ",
+     "رَجَاء",
+     "مَرْجُوّ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "مِنْ (هَدَى):",
+    "options": [
+     "مَهْدِيّ",
+     "هِدَايَة",
+     "هَادٍ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "مِنْ (شَكَرَ):",
+    "options": [
+     "مَشْكُور",
+     "شُكْر",
+     "شَاكِر"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "مِنْ (نَصَرَ):",
+    "options": [
+     "نَصْر",
+     "نَاصِر",
+     "مَنْصُور"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "مِنْ (حَمِدَ):",
+    "options": [
+     "حَامِد",
+     "حَمْد",
+     "مَحْمُود"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "اسْمُ مَفْعُولٍ:",
+    "options": [
+     "حِفْظ",
+     "حَافِظ",
+     "مَحْفُوظ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "اسْمُ مَفْعُولٍ:",
+    "options": [
+     "رِسَالَة",
+     "مُرْسَل",
+     "مُرْسِل"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "اسْمُ مَفْعُولٍ:",
+    "options": [
+     "قَبُول",
+     "مُسْتَقْبِل",
+     "مُسْتَقْبَل"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "اسْمُ مَفْعُولٍ:",
+    "options": [
+     "نَظَر",
+     "مُنْتَظَر",
+     "مُنْتَظِر"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "اسْمُ مَفْعُولٍ:",
+    "options": [
+     "قَابِل",
+     "مَقْبُول",
+     "قَبُول"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "اسْمُ مَفْعُولٍ:",
+    "options": [
+     "مَعْرِفَة",
+     "مَعْرُوف",
+     "عَارِف"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "اسْمُ فَاعِلٍ:",
+    "options": [
+     "نِظَام",
+     "مُنَظِّم",
+     "مُنَظَّم"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "اسْمُ فَاعِلٍ:",
+    "options": [
+     "مَحْمُود",
+     "حَامِد",
+     "حَمْد"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "وَزْنُ الثُّلَاثِيِّ:",
+    "options": [
+     "فَاعِل",
+     "مُفْعِل",
+     "مَفْعُول"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "حَرَكَةُ مَا قَبْلَ آخِرِهِ مِنْ غَيْرِ الثُّلَاثِيِّ:",
+    "options": [
+     "الْكَسْرُ",
+     "الضَّمُّ",
+     "الْفَتْحُ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "اسْمُ الْمَفْعُولِ يَدُلُّ عَلَى:",
+    "options": [
+     "الْحَدَثِ",
+     "مَنْ وَقَعَ عَلَيْهِ الْفِعْلُ",
+     "مَنْ قَامَ بِالْفِعْلِ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "اسْمُ الْفَاعِلِ يَدُلُّ عَلَى:",
+    "options": [
+     "الْمَكَانِ",
+     "مَنْ قَامَ بِالْفِعْلِ",
+     "مَنْ وَقَعَ عَلَيْهِ الْفِعْلُ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«الدَّرْسُ ........»:",
+    "options": [
+     "فَاهِمٌ",
+     "فَهْمٌ",
+     "مَفْهُومٌ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«الضَّيْفُ ........»:",
+    "options": [
+     "مُكْرَمٌ",
+     "كَرَمٌ",
+     "مُكْرِمٌ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«الْمُعَلِّمُ ........»:",
+    "options": [
+     "مُحْتَرِمٌ",
+     "احْتِرَامٌ",
+     "مُحْتَرَمٌ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«الْوَاجِبُ ........»:",
+    "options": [
+     "مَكْتُوبٌ",
+     "كَاتِبٌ",
+     "كِتَابَةٌ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«الْحَقُّ ........»:",
+    "options": [
+     "نَصْرٌ",
+     "نَاصِرٌ",
+     "مَنْصُورٌ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«الطَّعَامُ ........»:",
+    "options": [
+     "مَطْبُوخٌ",
+     "طَبْخٌ",
+     "طَابِخٌ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«الْكِتَابُ ........»:",
+    "options": [
+     "مَطْبُوعٌ",
+     "طَابِعٌ",
+     "طِبَاعَةٌ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«الْعَمَلُ ........»:",
+    "options": [
+     "مُتْقِنٌ",
+     "مُتْقَنٌ",
+     "إِتْقَانٌ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«الرِّسَالَةُ ........»:",
+    "options": [
+     "مُرْسِلَةٌ",
+     "إِرْسَالٌ",
+     "مُرْسَلَةٌ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«السِّرُّ ........»:",
+    "options": [
+     "مَكْتُومٌ",
+     "كِتْمَانٌ",
+     "كَاتِمٌ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«الْوَطَنُ ........»:",
+    "options": [
+     "مَحْمِيٌّ",
+     "حِمَايَةٌ",
+     "حَامٍ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«الْمَرِيضُ ........»:",
+    "options": [
+     "مُعَالِجٌ",
+     "عِلَاجٌ",
+     "مُعَالَجٌ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "فِعْلُ (مَقْرُوء):",
+    "options": [
+     "أَقْرَأَ",
+     "قَرَأَ",
+     "اسْتَقْرَأَ"
+    ],
+    "ans": 1
+   }
+  ]
+ }
+];
+    const AudioContext = window.AudioContext || window.webkitAudioContext;
+    let audioCtx = null;
+
+    function initAudio() {
+        if (!audioCtx) { audioCtx = new AudioContext(); }
+        if (audioCtx.state === 'suspended') { audioCtx.resume(); }
+    }
+
+    function playTone(freq, type, duration, vol = 0.1) {
+        if (!audioCtx) return;
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = type;
+        osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+        gain.gain.setValueAtTime(vol, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + duration);
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start();
+        osc.stop(audioCtx.currentTime + duration);
+    }
+
+    function playCorrect() {
+        initAudio();
+        playTone(523.25, 'sine', 0.15, 0.15);
+        setTimeout(() => playTone(659.25, 'sine', 0.15, 0.15), 100);
+        setTimeout(() => playTone(783.99, 'sine', 0.25, 0.15), 200);
+        spawnConfetti();
+    }
+
+    function playWrong() {
+        initAudio();
+        playTone(200, 'sawtooth', 0.3, 0.1);
+    }
+
+    function spawnConfetti() {
+        const colors = ['#ea580c', '#fbbf24', '#10b981', '#38bdf8', '#7c2d12', '#f59e0b'];
+        for (let i = 0; i < 25; i++) {
+            const conf = document.createElement('div');
+            conf.className = 'confetti';
+            conf.style.left = Math.random() * 100 + 'vw';
+            conf.style.background = colors[Math.floor(Math.random() * colors.length)];
+            conf.style.animationDuration = (Math.random() * 1.5 + 1.5) + 's';
+            document.body.appendChild(conf);
+            setTimeout(() => conf.remove(), 3000);
+        }
+    }
+
+    function shuffleArray(arr) {
+        return arr.map(a => ({sort: Math.random(), value: a}))
+            .sort((a, b) => a.sort - b.sort)
+            .map(a => a.value);
+    }
+
+    function showFeedback(isCorrect, callback) {
+        const modal = document.getElementById('feedback-modal');
+        const icon = document.getElementById('feedback-icon');
+        const title = document.getElementById('feedback-title');
+        
+        if (isCorrect) {
+            playCorrect();
+            icon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>`;
+            title.textContent = 'إجابة صحيحة، أحسنت!';
+            title.style.color = 'var(--success)';
+        } else {
+            playWrong();
+            icon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="var(--danger)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>`;
+            title.textContent = 'إجابة خاطئة!';
+            title.style.color = 'var(--danger)';
+        }
+
+        modal.classList.add('active');
+        setTimeout(() => {
+            modal.classList.remove('active');
+            if (callback) callback();
+        }, 1300);
+    }
+
+    let currentGame = null;
+    let currentQuestions = [];
+    let qIndex = 0;
+    let animInterval = null;
+    let wrongAnswers = [];
+
+    function initApp() {
+        const menuGrid = document.getElementById('menu-grid');
+        menuGrid.innerHTML = '';
+        allGamesData.forEach(game => {
+            const card = document.createElement('div');
+            card.className = 'menu-card';
+            card.innerHTML = `
+                <div class="icon-container">${game.icon}</div>
+                <h3>${game.title}</h3>
+                <p>${game.desc}</p>
+                <span class="round-badge">🎲 ${Math.min(QUESTIONS_PER_ROUND, game.questions.length)} سؤالًا عشوائيًّا من ${game.questions.length}</span>
+            `;
+            card.onclick = () => startGame(game);
+            menuGrid.appendChild(card);
+        });
+        
+        document.body.addEventListener('touchstart', initAudio, { once: true });
+        document.body.addEventListener('click', initAudio, { once: true });
+    }
+
+    function returnToMenu() {
+        clearInterval(animInterval);
+        document.getElementById('game-screen').classList.add('hidden');
+        document.getElementById('home-screen').classList.remove('hidden');
+        document.getElementById('main-header').classList.remove('hidden');
+        document.getElementById('main-footer').classList.remove('hidden');
+    }
+
+    function updateProgress() {
+        document.getElementById('game-progress').innerText = `${qIndex + 1} / ${currentQuestions.length}`;
+    }
+
+    function sendResultToTeacher(score, total) {
+        const nameInput = document.getElementById('student-name-input');
+        const warning = document.getElementById('name-warning');
+        const name = nameInput.value.trim();
+        if (!name) {
+            warning.style.display = 'block';
+            nameInput.focus();
+            nameInput.classList.add('shake');
+            setTimeout(() => nameInput.classList.remove('shake'), 500);
+            return;
+        }
+        warning.style.display = 'none';
+        try { localStorage.setItem('nour-student-name', name); } catch (e) {}
+        const message = "مرحبًا أستاذ نور الدين 🌟\n" +
+            "الطالب/ـة: " + name + "\n" +
+            "الدرس: " + LESSON_FULL_NAME + "\n" +
+            "اللعبة: " + currentGame.title + "\n" +
+            "النتيجة: " + score + " من " + total + "\n" +
+            "عدد الأخطاء: " + (total - score);
+        const url = "https://wa.me/" + TEACHER_WHATSAPP + "?text=" + encodeURIComponent(message);
+        window.open(url, '_blank');
+    }
+
+    function gameComplete() {
+        const gc = document.getElementById('game-container');
+        playCorrect();
+        setTimeout(playCorrect, 300);
+
+        let score = currentQuestions.length - wrongAnswers.length;
+        let summaryHTML = '';
+
+        if (wrongAnswers.length > 0) {
+            summaryHTML += `
+            <div style="margin-top: 25px; text-align: right; background: #f8fafc; padding: 20px; border-radius: 15px; border: 2px solid #e2e8f0; max-height: 350px; overflow-y: auto;" class="errors-list">
+                <h3 style="color: var(--danger); margin-bottom: 15px; text-align: center; font-size: 1.4rem;">الأسئلة التي أخطأت فيها 📝</h3>
+                <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 15px;">`;
+            
+            wrongAnswers.forEach((item, index) => {
+                summaryHTML += `
+                <li style="background: white; padding: 15px; border-radius: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border-right: 5px solid var(--danger);">
+                    <div style="font-weight: bold; color: var(--primary); margin-bottom: 8px; font-size: 1.1rem;">${index + 1}. ${item.question}</div>
+                    <div style="color: #64748b; font-size: 1rem; margin-bottom: 5px;">إجابتك: <span style="color: var(--danger); text-decoration: line-through;">${item.selected}</span></div>
+                    <div style="color: var(--success); font-weight: bold; font-size: 1.1rem;">الإجابة الصحيحة: ${item.correct}</div>
+                </li>`;
+            });
+            summaryHTML += `</ul></div>`;
+        } else {
+            summaryHTML += `<p style="color: var(--success); font-size: 1.5rem; font-weight: bold; margin-top: 20px;">أداء مثالي! لم تخطئ في أي سؤال 🌟</p>`;
+        }
+
+        gc.innerHTML = `
+            <div style="text-align:center; padding: 40px 20px; background: white; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
+                <div style="display:flex; justify-content:center; margin-bottom: 20px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="var(--warning)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21h10"/><path d="M12 17v4"/><path d="M12 3v14"/><path d="M5 7h14"/><path d="M12 3l-4 4 4 4 4-4-4-4z"/></svg>
+                </div>
+                <h2 style="color: var(--primary); margin-bottom: 10px; font-size:2rem; font-weight:800;">انتهت اللعبة!</h2>
+                <p style="font-size: 1.4rem; margin-bottom: 10px; color:#64748b; font-weight:bold;">نتيجتك: ${score} من ${currentQuestions.length}</p>
+                ${summaryHTML}
+                <div class="send-result-box">
+                    <h3>📤 أرسل نتيجتك للأستاذ نور الدين</h3>
+                    <input type="text" id="student-name-input" class="name-input" placeholder="اكتب اسمك هنا ✍️" onkeydown="if(event.key==='Enter') sendResultToTeacher(${score}, ${currentQuestions.length})">
+                    <button class="btn whatsapp-send-btn" onclick="sendResultToTeacher(${score}, ${currentQuestions.length})">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.656.843 5.12 2.26 7.15L.626 24l5.01-1.61c1.983 1.25 4.27 1.91 6.395 1.91 6.646 0 12.03-5.385 12.03-12.031S18.677 0 12.031 0zm6.544 17.202c-.273.766-1.58 1.464-2.185 1.503-.56.035-1.28.23-4.085-.86-3.39-1.32-5.59-4.78-5.736-4.97-.145-.19-1.37-1.82-1.37-3.475 0-1.655.857-2.47 1.164-2.8.307-.33.67-.413.89-.413.22 0 .44 0 .633.01.205.01.482-.08.736.53.264.634.904 2.203.984 2.366.08.163.133.353.033.553-.1.2-.153.326-.307.506-.154.18-.32.38-.453.506-.153.153-.314.316-.134.626.18.31.8 1.32 1.71 2.13.176.157.363.31.558.45 1.05.76 1.83 1.05 2.13 1.18.3.13.474.11.652-.09.18-.205.766-.893.97-1.2.204-.307.41-.256.69-.153.28.103 1.77.836 2.074.99.304.153.506.23.582.356.076.126.076.73-.197 1.496z"/></svg>
+                        أرسل النتيجة للأستاذ نور
+                    </button>
+                    <p id="name-warning" class="name-warning" style="display:none;">من فضلك اكتب اسمك أولاً ✍️</p>
+                </div>
+                <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:20px">
+                    <button class="btn" style="font-size:1.15rem; padding:14px 26px;" onclick="startGame(currentGame)">إعادة اللعبة</button>
+                    <button class="btn back-btn" style="font-size:1.15rem; padding:14px 26px;" onclick="returnToMenu()">القائمة الرئيسية</button>
+                </div>
+            </div>
+        `;
+        try { const saved = localStorage.getItem('nour-student-name'); if (saved) document.getElementById('student-name-input').value = saved; } catch (e) {}
+    }
+
+    // اختيار 20 سؤالًا عشوائيًّا من بنك الأسئلة، مع تفضيل الأسئلة التي لم تظهر في المرة السابقة
+    function pickRound(gameData) {
+        const all = gameData.questions.map((q, i) => ({ q, i }));
+        const n = Math.min(QUESTIONS_PER_ROUND, all.length);
+        const key = LESSON_KEY + '-' + gameData.id;
+        let last = [];
+        try { last = JSON.parse(localStorage.getItem(key) || '[]'); } catch (e) { last = []; }
+        const lastSet = new Set(last);
+        const fresh = shuffleArray(all.filter(x => !lastSet.has(x.i)));
+        const used = shuffleArray(all.filter(x => lastSet.has(x.i)));
+        const chosen = shuffleArray(fresh.concat(used).slice(0, n));
+        try { localStorage.setItem(key, JSON.stringify(chosen.map(x => x.i))); } catch (e) {}
+        return chosen.map(x => x.q);
+    }
+
+    function startGame(gameData) {
+        initAudio();
+        currentGame = gameData;
+        currentQuestions = pickRound(gameData);
+        qIndex = 0;
+        wrongAnswers = [];
+        
+        document.getElementById('home-screen').classList.add('hidden');
+        document.getElementById('main-header').classList.add('hidden');
+        document.getElementById('main-footer').classList.add('hidden');
+        document.getElementById('game-screen').classList.remove('hidden');
+        document.getElementById('game-title').innerText = gameData.title;
+        
+        renderNextState();
+    }
+
+    function renderNextState() {
+        if (qIndex >= currentQuestions.length) {
+            gameComplete();
+            return;
+        }
+
+        const gc = document.getElementById('game-container');
+        gc.innerHTML = '';
+        updateProgress();
+
+        if (currentGame.type === 'mcq') {
+            renderMCQ(gc);
+        } else if (currentGame.type === 'bubbles') {
+            renderBubbles(gc);
+        } else if (currentGame.type === 'shooting') {
+            renderShooting(gc);
+        } else if (currentGame.type === 'true_false') {
+            renderTrueFalse(gc);
+        } else if (currentGame.type === 'genius') {
+            renderGenius(gc);
+        }
+    }
+
+    // 1. اختيارات (MCQ)
+    function renderMCQ(container) {
+        const qData = currentQuestions[qIndex];
+        const correctText = qData.options[qData.ans];
+        const shuffledOptions = shuffleArray([...qData.options]);
+
+        const btnContainer = document.createElement('div');
+        btnContainer.className = 'options-grid';
+        
+        let isAnswered = false;
+
+        shuffledOptions.forEach(opt => {
+            const btn = document.createElement('button');
+            btn.className = 'btn';
+            btn.innerText = opt;
+            btn.onclick = () => {
+                if(isAnswered) return;
+                isAnswered = true;
+
+                if (opt === correctText) {
+                    btn.classList.add('btn-correct');
+                    showFeedback(true, () => { qIndex++; renderNextState(); });
+                } else {
+                    btn.classList.add('btn-wrong');
+                    wrongAnswers.push({ question: qData.q, correct: correctText, selected: opt });
+                    showFeedback(false, () => { qIndex++; renderNextState(); });
+                }
+            };
+            btnContainer.appendChild(btn);
+        });
+
+        const qBox = document.createElement('div');
+        qBox.className = 'question-box';
+        qBox.innerText = qData.q;
+        
+        container.appendChild(qBox);
+        container.appendChild(btnContainer);
+    }
+
+    // 2. صح أم خطأ
+    function renderTrueFalse(container) {
+        const qData = currentQuestions[qIndex];
+        const correctText = qData.options[qData.ans];
+
+        const qBox = document.createElement('div');
+        qBox.className = 'question-box';
+        qBox.innerText = qData.q;
+        
+        const tfContainer = document.createElement('div');
+        tfContainer.className = 'tf-grid';
+        
+        let isAnswered = false;
+
+        const fixedOptions = ["صح", "خطأ"];
+
+        fixedOptions.forEach(opt => {
+            const btn = document.createElement('button');
+            btn.className = 'btn';
+            btn.style.flex = '1';
+            btn.style.minWidth = '200px';
+            btn.style.fontSize = '2rem';
+            btn.style.padding = '30px';
+            btn.style.justifyContent = 'center';
+            
+            if(opt === "صح") {
+                btn.style.background = "linear-gradient(to bottom, #10b981, #059669)";
+                btn.style.borderBottomColor = "#047857";
+            } else {
+                btn.style.background = "linear-gradient(to bottom, #ef4444, #dc2626)";
+                btn.style.borderBottomColor = "#b91c1c";
+            }
+
+            btn.innerText = opt;
+            
+            btn.onclick = () => {
+                if(isAnswered) return;
+                isAnswered = true;
+
+                if (opt === correctText) {
+                    btn.classList.add('btn-correct');
+                    showFeedback(true, () => { qIndex++; renderNextState(); });
+                } else {
+                    btn.classList.add('btn-wrong');
+                    wrongAnswers.push({ question: qData.q, correct: correctText, selected: opt });
+                    showFeedback(false, () => { qIndex++; renderNextState(); });
+                }
+            };
+            tfContainer.appendChild(btn);
+        });
+
+        container.appendChild(qBox);
+        container.appendChild(tfContainer);
+    }
+
+    // 3. الفقاعات المتساقطة
+    function renderBubbles(container) {
+        clearInterval(animInterval);
+        const qData = currentQuestions[qIndex];
+        const correctText = qData.options[qData.ans];
+        const shuffledOptions = shuffleArray([...qData.options]);
+
+        const qBox = document.createElement('div');
+        qBox.className = 'question-box';
+        qBox.innerText = qData.q;
+        
+        const area = document.createElement('div');
+        area.className = 'bubbles-area';
+
+        let bubbles = [];
+        let isAnswered = false;
+
+        shuffledOptions.forEach((opt, index) => {
+            const bubble = document.createElement('div');
+            bubble.className = 'bubble';
+            bubble.innerHTML = `<span>${opt}</span>`;
+            
+            let leftPos = 2 + (index * 24); 
+            bubble.style.left = leftPos + '%';
+            
+            let topPos = -100 - (Math.random() * 80);
+            bubble.style.top = topPos + 'px';
+            
+            /* سرعة سقوط أعلى قليلاً */
+            let speed = 0.55 + Math.random() * 0.45; 
+
+            bubble.onclick = () => {
+                if (isAnswered) return;
+                isAnswered = true;
+                clearInterval(animInterval);
+                if (opt === correctText) {
+                    bubble.style.background = 'var(--success)';
+                    bubble.style.color = 'white';
+                    showFeedback(true, () => { qIndex++; renderNextState(); });
+                } else {
+                    bubble.style.background = 'var(--danger)';
+                    bubble.style.color = 'white';
+                    wrongAnswers.push({ question: qData.q, correct: correctText, selected: opt });
+                    showFeedback(false, () => { qIndex++; renderNextState(); });
+                }
+            };
+
+            area.appendChild(bubble);
+            bubbles.push({ el: bubble, top: topPos, speed: speed, isCorrect: opt === correctText, active: true });
+        });
+
+        container.appendChild(qBox);
+        container.appendChild(area);
+        
+        let hint = document.createElement('div');
+        hint.style.textAlign = 'center';
+        hint.style.marginTop = '15px';
+        hint.style.color = 'var(--primary)';
+        hint.style.fontWeight = 'bold';
+        hint.style.fontSize = '1.1rem';
+        hint.innerHTML = `💡 اضغط على الفقاعة التي تحمل الإجابة الصحيحة قبل أن تسقط!`;
+        container.appendChild(hint);
+
+        let areaHeight = 400;
+
+        animInterval = setInterval(() => {
+            if (isAnswered) return;
+            bubbles.forEach(b => {
+                if (!b.active) return;
+                b.top += b.speed;
+                b.el.style.top = b.top + 'px';
+                b.el.style.transform = `translateX(${Math.sin(b.top / 20) * 5}px)`;
+
+                if (b.top > areaHeight) {
+                    b.active = false;
+                    b.el.style.display = 'none';
+                    if (b.isCorrect && !isAnswered) {
+                        isAnswered = true;
+                        clearInterval(animInterval);
+                        wrongAnswers.push({ question: qData.q, correct: correctText, selected: "سقطت دون اختيار" });
+                        showFeedback(false, () => { qIndex++; renderNextState(); });
+                    }
+                }
+            });
+        }, 20);
+    }
+
+    // 4. التنشين والاصطياد
+    function renderShooting(container) {
+        clearInterval(animInterval);
+        const qData = currentQuestions[qIndex];
+        const correctText = qData.options[qData.ans];
+        const shuffledOptions = shuffleArray([...qData.options]);
+
+        const qBox = document.createElement('div');
+        qBox.className = 'question-box';
+        qBox.innerText = qData.q;
+        
+        const area = document.createElement('div');
+        area.className = 'shooting-area';
+
+        let isAnswered = false;
+        const birds = [];
+
+        shuffledOptions.forEach((opt, index) => {
+            const bird = document.createElement('div');
+            bird.className = 'target-bird';
+            
+            bird.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg> <span>${opt}</span>`;
+            
+            let topPos = 15 + (index * 20); 
+            bird.style.top = topPos + '%';
+            
+            let pos = (index % 2 === 0) ? -200 : window.innerWidth;
+            let speed = (Math.random() * 2.5 + 1.5) * ((index % 2 === 0) ? 1 : -1);
+            
+            bird.style.left = pos + 'px';
+
+            bird.onclick = () => {
+                if(isAnswered) return;
+                isAnswered = true;
+
+                if (opt === correctText) {
+                    bird.style.background = 'var(--success)';
+                    bird.style.color = 'white';
+                    bird.style.borderColor = 'white';
+                    showFeedback(true, () => { qIndex++; renderNextState(); });
+                } else {
+                    bird.style.background = 'var(--danger)';
+                    bird.style.color = 'white';
+                    bird.style.borderColor = 'white';
+                    wrongAnswers.push({ question: qData.q, correct: correctText, selected: opt });
+                    showFeedback(false, () => { qIndex++; renderNextState(); });
+                }
+            };
+
+            area.appendChild(bird);
+            birds.push({ el: bird, pos: pos, speed: speed });
+        });
+
+        animInterval = setInterval(() => {
+            if (isAnswered) { clearInterval(animInterval); return; }
+            const w = area.clientWidth || window.innerWidth;
+            birds.forEach(b => {
+                b.pos += b.speed;
+                if (b.pos > w + 50) b.pos = -250;
+                if (b.pos < -250) b.pos = w + 50;
+                b.el.style.left = b.pos + 'px';
+            });
+        }, 20);
+
+        container.appendChild(qBox);
+        container.appendChild(area);
+        
+        let hint = document.createElement('div');
+        hint.style.textAlign = 'center';
+        hint.style.marginTop = '15px';
+        hint.style.color = 'var(--primary)';
+        hint.style.fontWeight = 'bold';
+        hint.style.fontSize = '1.1rem';
+        hint.style.display = 'flex';
+        hint.style.alignItems = 'center';
+        hint.style.justifyContent = 'center';
+        hint.style.gap = '8px';
+        hint.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg> اضغط على الإجابة الصحيحة وهي تتحرك!`;
+        container.appendChild(hint);
+    }
+
+    // 5. تحدي العباقرة (سباق مع الوقت)
+    function renderGenius(container) {
+        clearInterval(animInterval);
+        const qData = currentQuestions[qIndex];
+        const correctText = qData.options[qData.ans];
+        const shuffledOptions = shuffleArray([...qData.options]);
+
+        const qBox = document.createElement('div');
+        qBox.className = 'question-box genius-box';
+        qBox.innerHTML = `⚡ ${qData.q}`;
+
+        const timerWrap = document.createElement('div');
+        timerWrap.className = 'genius-timer-wrap';
+        const timerBar = document.createElement('div');
+        timerBar.className = 'genius-timer-bar';
+        timerWrap.appendChild(timerBar);
+
+        const btnContainer = document.createElement('div');
+        btnContainer.className = 'options-grid';
+
+        let isAnswered = false;
+        let timeLeft = 12000;
+        const totalTime = timeLeft;
+
+        function finish(isCorrect, selectedText) {
+            if (isAnswered) return;
+            isAnswered = true;
+            clearInterval(animInterval);
+            if (isCorrect) {
+                showFeedback(true, () => { qIndex++; renderNextState(); });
+            } else {
+                wrongAnswers.push({ question: qData.q, correct: correctText, selected: selectedText || "انتهى الوقت! ⏱️" });
+                showFeedback(false, () => { qIndex++; renderNextState(); });
+            }
+        }
+
+        shuffledOptions.forEach(opt => {
+            const btn = document.createElement('button');
+            btn.className = 'btn';
+            btn.innerText = opt;
+            btn.onclick = () => {
+                if (isAnswered) return;
+                if (opt === correctText) {
+                    btn.classList.add('btn-correct');
+                    finish(true);
+                } else {
+                    btn.classList.add('btn-wrong');
+                    finish(false, opt);
+                }
+            };
+            btnContainer.appendChild(btn);
+        });
+
+        container.appendChild(qBox);
+        container.appendChild(timerWrap);
+        container.appendChild(btnContainer);
+
+        let hint = document.createElement('div');
+        hint.className = 'genius-hint';
+        hint.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg> سباق مع الوقت! أجب بسرعة قبل نفاد الثواني`;
+        container.appendChild(hint);
+
+        animInterval = setInterval(() => {
+            if (isAnswered) return;
+            timeLeft -= 100;
+            let pct = Math.max(0, (timeLeft / totalTime) * 100);
+            timerBar.style.width = pct + '%';
+            if (timeLeft <= 0) {
+                clearInterval(animInterval);
+                finish(false, null);
+            }
+        }, 100);
+    }
+
+    window.onload = initApp;
+</script>
+</body>
+</html>
